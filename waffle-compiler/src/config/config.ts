@@ -17,7 +17,7 @@ export interface Config {
    * - solcjs - uses solc from the solcjs npm package
    * - dockerized-vyper - uses vyper from a docker image
    */
-  compilerType: 'native' | 'dockerized-solc' | 'solcjs' | 'dockerized-vyper';
+  compilerType: "native" | "dockerized-solc" | "solcjs" | "dockerized-vyper";
   /** Version of the solidity compiler e.g. "0.5.1" or "default" */
   compilerVersion: string;
   /**
@@ -37,7 +37,7 @@ export interface Config {
    * - all - both of the above
    * - minimal - output just ABI and Bytecode
    */
-  outputType: 'multiple' | 'combined' | 'all' | 'minimal';
+  outputType: "multiple" | "combined" | "all" | "minimal";
   /** Control contract types generation with Typechain */
   /** Enable type generation. False by default */
   typechainEnabled: boolean;
@@ -45,4 +45,4 @@ export interface Config {
   typechainOutputDir: string;
 }
 
-export type InputConfig = Partial<Config>
+export type InputConfig = Partial<Config>;
