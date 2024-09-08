@@ -43,7 +43,7 @@
   "dependencies": {
     "@resolver-engine/imports": "^0.3.3",
     "@resolver-engine/imports-fs": "^0.3.3",
-    "@typechain/ethers-v5": "^10.0.0",
+    "@typechain/ethers-v6": "^0.5.1",
     "@types/mkdirp": "^0.5.2",
     "@types/node-fetch": "^2.6.1",
     "mkdirp": "^0.5.1",
