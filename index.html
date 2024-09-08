@@ -1,271 +1,514 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Waffle 2</title>
-	<link href="index_files/css.css" rel="stylesheet">
-	<link rel="icon" href="https://getwaffle.io/img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="index_files/main.css">
-</head>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Waffle 2</title>
+    <link href="index_files/css.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="https://getwaffle.io/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="index_files/main.css" />
+  </head>
 
-<body>
-	<header class="header">
-		<img class="header__img header__img--desktop" src="index_files/waffle@1x.png" srcset="index_files/waffle@2x.png 1x">
-		<img hidden="" class="header__img header__img--tablet" src="index_files/waffle-tablet@1x.png" srcset="index_files/waffle-tablet@2x.png 1x">
-		<img hidden="" class="header__img header__img--mobile" src="index_files/waffle-mobile@1x.png" srcset="index_files/waffle-mobile@2x.png 1x">
-		<div class="container">
-			<div class="header__top">
-				<div class="logo">
-					<img src="index_files/logo.svg" alt="Waffle">
-				</div>
-			</div>
-			<div class="header__content">
-				<h1 class="header__title">Sweet tool for <br><span class="text-bg-highlight"><span>smart contracts</span> <span>testing</span></span></h1>
-				<p class="header__subtitle">The most advanced framework for testing smart contracts</p>
+  <body>
+    <header class="header">
+      <img
+        class="header__img header__img--desktop"
+        src="index_files/waffle@1x.png"
+        srcset="index_files/waffle@2x.png 1x"
+      />
+      <img
+        hidden=""
+        class="header__img header__img--tablet"
+        src="index_files/waffle-tablet@1x.png"
+        srcset="index_files/waffle-tablet@2x.png 1x"
+      />
+      <img
+        hidden=""
+        class="header__img header__img--mobile"
+        src="index_files/waffle-mobile@1x.png"
+        srcset="index_files/waffle-mobile@2x.png 1x"
+      />
+      <div class="container">
+        <div class="header__top">
+          <div class="logo">
+            <img src="index_files/logo.svg" alt="Waffle" />
+          </div>
+        </div>
+        <div class="header__content">
+          <h1 class="header__title">
+            Sweet tool for <br /><span class="text-bg-highlight"
+              ><span>smart contracts</span> <span>testing</span></span
+            >
+          </h1>
+          <p class="header__subtitle">
+            The most advanced framework for testing smart contracts
+          </p>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="section usage">
+        <div class="container">
+          <p class="section__reference">
+            Over
+            <a
+              href="https://github.com/EthWorks/Waffle/network/dependents?package_id=UGFja2FnZS0xMTU1ODUyNzY%3D"
+              target="_blank"
+              class="link"
+              >100,000+ projects</a
+            >
+            are using Waffle
+          </p>
+          <h2 class="usage__title">USED BY:</h2>
+          <ul class="usage-list">
+            <li class="usage-list__item">
+              <a
+                target="blank"
+                href="https://uniswap.org/"
+                class="uniswap-logo"
+              >
+                <img
+                  src="index_files/uniswap.png"
+                  srcset="index_files/uniswap@2x.png 1x"
+                  alt="uniswap logo"
+                  class="usage-list__img uniswap-logo"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://aave.com/">
+                <img
+                  src="index_files/aave.png"
+                  srcset="index_files/aave@2x.png 1x"
+                  alt="aave logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://0x.org/" class="uniswap-logo">
+                <img
+                  src="index_files/0x.png"
+                  srcset="index_files/0x@2x.png 1x"
+                  alt="0x logo"
+                  class="usage-list__img logo-0x"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://balancer.finance/">
+                <img
+                  src="index_files/balancer.png"
+                  srcset="index_files/balancer@2x.png 1x"
+                  alt="balancer logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://zksync.io/">
+                <img
+                  src="index_files/zksync.png"
+                  srcset="index_files/zksync@2x.png 1x"
+                  alt="zk-sync logo"
+                  class="usage-list__img zk-sync-logo"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://connext.network/">
+                <img
+                  src="index_files/connext.png"
+                  srcset="index_files/connext@2x.png 1x"
+                  alt="connext xmas logo"
+                  class="usage-list__img connext-logo"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://optimism.io/">
+                <img
+                  src="index_files/optimism.png"
+                  srcset="index_files/optimism@2x.png 1x"
+                  alt="optimism logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://hardhat.org/">
+                <img
+                  src="index_files/hardhat.png"
+                  srcset="index_files/hardhat@2x.png 1x"
+                  alt="hardhat logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://cosmos.network/">
+                <img
+                  src="index_files/cosmos.png"
+                  srcset="index_files/cosmos@2x.png 1x"
+                  alt="cosmos logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://ens.domains/">
+                <img
+                  src="index_files/ens.png"
+                  srcset="index_files/ens@2x.png 1x"
+                  alt="ens logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://aragon.org/">
+                <img
+                  src="index_files/aragon.png"
+                  srcset="index_files/aragon@2x.png 1x"
+                  alt="aragon logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://mycrypto.com/">
+                <img
+                  src="index_files/mycrypto.png"
+                  srcset="index_files/mycrypto@2x.png 1x"
+                  alt="mycrypto logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://www.trusttoken.com/">
+                <img
+                  src="index_files/trusttoken.png"
+                  srcset="index_files/trusttoken@2x.png 1x"
+                  alt="trusttoken logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://daostack.io/">
+                <img
+                  src="index_files/daostack.png"
+                  srcset="index_files/daostack@2x.png 1x"
+                  alt="daostack logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://www.originprotocol.com/">
+                <img
+                  src="index_files/origin.png"
+                  srcset="index_files/origin@2x.png 1x"
+                  alt="originprotocol logo"
+                  class="usage-list__img"
+                />
+              </a>
+            </li>
 
-			</div>
-		</div>
-	</header>
-	<main class="main">
-		<section class="section usage">
-			<div class="container">
-				<p class="section__reference">Over <a href="https://github.com/EthWorks/Waffle/network/dependents?package_id=UGFja2FnZS0xMTU1ODUyNzY%3D" target="_blank" class="link">100,000+ projects</a> are using Waffle</p>
-				<h2 class="usage__title">USED BY:</h2>
-				<ul class="usage-list">
-					<li class="usage-list__item">
-						<a target="blank" href="https://uniswap.org/" class="uniswap-logo">
-							<img src="index_files/uniswap.png" srcset="index_files/uniswap@2x.png 1x" alt="uniswap logo" class="usage-list__img uniswap-logo">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://aave.com/">
-							<img src="index_files/aave.png" srcset="index_files/aave@2x.png 1x" alt="aave logo" class="usage-list__img">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://0x.org/" class="uniswap-logo">
-							<img src="index_files/0x.png" srcset="index_files/0x@2x.png 1x" alt="0x logo" class="usage-list__img logo-0x">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://balancer.finance/">
-							<img src="index_files/balancer.png" srcset="index_files/balancer@2x.png 1x" alt="balancer logo" class="usage-list__img">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://zksync.io/">
-							<img src="index_files/zksync.png" srcset="index_files/zksync@2x.png 1x" alt="zk-sync logo" class="usage-list__img zk-sync-logo">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://connext.network/">
-							<img src="index_files/connext.png" srcset="index_files/connext@2x.png 1x" alt="connext xmas logo" class="usage-list__img connext-logo">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://optimism.io/">
-							<img src="index_files/optimism.png" srcset="index_files/optimism@2x.png 1x" alt="optimism logo" class="usage-list__img">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://hardhat.org/">
-							<img src="index_files/hardhat.png" srcset="index_files/hardhat@2x.png 1x" alt="hardhat logo" class="usage-list__img">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://cosmos.network/">
-							<img src="index_files/cosmos.png" srcset="index_files/cosmos@2x.png 1x" alt="cosmos logo" class="usage-list__img">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://ens.domains/">
-							<img src="index_files/ens.png" srcset="index_files/ens@2x.png 1x" alt="ens logo" class="usage-list__img">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://aragon.org/">
-							<img src="index_files/aragon.png" srcset="index_files/aragon@2x.png 1x" alt="aragon logo" class="usage-list__img">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://mycrypto.com/">
-							<img src="index_files/mycrypto.png" srcset="index_files/mycrypto@2x.png 1x" alt="mycrypto logo" class="usage-list__img">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://www.trusttoken.com/">
-							<img src="index_files/trusttoken.png" srcset="index_files/trusttoken@2x.png 1x" alt="trusttoken logo" class="usage-list__img">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://daostack.io/">
-							<img src="index_files/daostack.png" srcset="index_files/daostack@2x.png 1x" alt="daostack logo" class="usage-list__img">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://www.originprotocol.com/">
-							<img src="index_files/origin.png" srcset="index_files/origin@2x.png 1x" alt="originprotocol logo" class="usage-list__img">
-						</a>
-					</li>
-										
-					<li class="usage-list__item">
-						<a target="blank" href="https://www.deversifi.com/">
-							<img src="index_files/deversifi.png" srcset="index_files/deversifi.png 1x" class="usage-list__img deversifi-logo" alt="deversifi logo">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://docs.tasit.io/">
-							<img src="index_files/tasit-sdk.png" srcset="index_files/tasit-sdk@2x.png 1x" alt="tasit-sdk logo" class="usage-list__img tasit-logo">
-						</a>
-					</li>
-					
-					<li class="usage-list__item">
-						<a target="blank" href="https://www.pooltogether.com/">
-							<img src="index_files/pool-together.png" srcset="index_files/pool-together@2x.png 1x" alt="pool together logo" class="usage-list__img pool-together-logo">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://www.celer.network/">
-							<img src="index_files/celer.png" srcset="index_files/celer@2x.png 1x" alt="celer logo" class="usage-list__img celer-logo">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://piedao.org/">
-							<img src="index_files/piedao.png" srcset="index_files/piedao@2x.png 1x" alt="piedao logo" class="usage-list__img piedao-logo">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://gitcoin.co/">
-							<img src="index_files/gitcoin.png" srcset="index_files/gitcoin@2x.png 1x" alt="gitcoin logo" class="usage-list__img gitcoin-logo">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://gnosis.io/">
-							<img src="index_files/gnosis.png" srcset="index_files/gnosis@2x.png 1x" alt="gnosis logo" class="usage-list__img gnosis-logo">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://sushiswapclassic.org/">
-							<img src="index_files/sushiswap.png" srcset="index_files/sushiswap@2x.png 1x" alt="sushiswap logo" class="usage-list__img sushiswap-logo">
-						</a>
-					</li>
-					<li class="usage-list__item">
-						<a target="blank" href="https://loopring.org/">
-							<img src="index_files/loopring.svg" alt="loopring logo" class="usage-list__img loopring-logo">
-						</a>
-					</li>
-				</ul>
-				<div class="usage__btn-row">
-					<a target="_blank" href="https://ethereum-waffle.readthedocs.io/en/latest/" class="btn btn--primary">
-						<img class="btn__img book" src="index_files/book1.svg" alt="book">
-						Documentation
-					</a>
-					<a href="https://github.com/EthWorks/Waffle" target="_blank" class="btn btn--primary">
-						<img class="btn__img" src="index_files/github.svg" alt="github">
-						View on Github
-					</a>
-				</div>
-			</div>
-		</section>
-		<section class="section philosophy">
-			<div class="container">
-				<h2 class="section-title philosophy__title">Philosophy</h2>
-				<ul class="advantages-list">
-					<li class="advantage">
-						<div class="advantage-img-wrapper">
-							<img src="index_files/simpler.svg" alt="bitten waffle" class="advantage-img">
-						</div>
-						<h3 class="advantage__title">Simpler</h3>
-						<p class="advantage__text">Minimalistic, fewer dependencies.</p>
-					</li>
-					<li class="advantage">
-						<div class="advantage-img-wrapper">
-							<img src="index_files/sweeter.svg" alt="waffle with chocolate" class="advantage-img">
-						</div>
-						<h3 class="advantage__title">Sweeter</h3>
-						<p class="advantage__text">Nicer syntax, easy to learn, and easy to extend.</p>
-					</li>
-					<li class="advantage">
-						<div class="advantage-img-wrapper">
-							<img src="index_files/faster.png" alt="waffle in motion" class="advantage-img">
-						</div>
-						<h3 class="advantage__title">Faster</h3>
-						<p class="advantage__text">Faster contract compilation and tests execution.</p>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<section class="section features">
-			<div class="container">
-				<h2 class="section-title">Features</h2>
+            <li class="usage-list__item">
+              <a target="blank" href="https://www.deversifi.com/">
+                <img
+                  src="index_files/deversifi.png"
+                  srcset="index_files/deversifi.png 1x"
+                  class="usage-list__img deversifi-logo"
+                  alt="deversifi logo"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://docs.tasit.io/">
+                <img
+                  src="index_files/tasit-sdk.png"
+                  srcset="index_files/tasit-sdk@2x.png 1x"
+                  alt="tasit-sdk logo"
+                  class="usage-list__img tasit-logo"
+                />
+              </a>
+            </li>
 
-				<div class="tabs">
-					<div class="tabs__buttons tabs__buttons--light features-tabs__buttons">
-						<button class="tabs__btn features-tabs__btn tabs__btn--light active" data-id="matchers">
-							<span class="tabs__btn-text">Sweet matchers</span>
-						</button>
-						<button class="tabs__btn features-tabs__btn tabs__btn--light" data-id="expectations">
-							<span class="tabs__btn-text">Mocking and testing expectations </span>
-						</button>
-						<button class="tabs__btn features-tabs__btn tabs__btn--light" data-id="fixtures">
-							<span class="tabs__btn-text">Fixtures</span>
-						</button>
-					</div>
-					<div hidden="" id="matchers" class="tabs__content visible features-tabs__content">
-						<h3 class="features-tabs__title">Sweet matchers</h3>
-				<pre class="pre scrolling-wrapper">					<code class="code hljs javascript"><span class="hljs-keyword">await</span> expect(token.transfer(walletTo.address, <span class="hljs-number">7</span>))
+            <li class="usage-list__item">
+              <a target="blank" href="https://www.pooltogether.com/">
+                <img
+                  src="index_files/pool-together.png"
+                  srcset="index_files/pool-together@2x.png 1x"
+                  alt="pool together logo"
+                  class="usage-list__img pool-together-logo"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://www.celer.network/">
+                <img
+                  src="index_files/celer.png"
+                  srcset="index_files/celer@2x.png 1x"
+                  alt="celer logo"
+                  class="usage-list__img celer-logo"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://piedao.org/">
+                <img
+                  src="index_files/piedao.png"
+                  srcset="index_files/piedao@2x.png 1x"
+                  alt="piedao logo"
+                  class="usage-list__img piedao-logo"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://gitcoin.co/">
+                <img
+                  src="index_files/gitcoin.png"
+                  srcset="index_files/gitcoin@2x.png 1x"
+                  alt="gitcoin logo"
+                  class="usage-list__img gitcoin-logo"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://gnosis.io/">
+                <img
+                  src="index_files/gnosis.png"
+                  srcset="index_files/gnosis@2x.png 1x"
+                  alt="gnosis logo"
+                  class="usage-list__img gnosis-logo"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://sushiswapclassic.org/">
+                <img
+                  src="index_files/sushiswap.png"
+                  srcset="index_files/sushiswap@2x.png 1x"
+                  alt="sushiswap logo"
+                  class="usage-list__img sushiswap-logo"
+                />
+              </a>
+            </li>
+            <li class="usage-list__item">
+              <a target="blank" href="https://loopring.org/">
+                <img
+                  src="index_files/loopring.svg"
+                  alt="loopring logo"
+                  class="usage-list__img loopring-logo"
+                />
+              </a>
+            </li>
+          </ul>
+          <div class="usage__btn-row">
+            <a
+              target="_blank"
+              href="https://ethereum-waffle.readthedocs.io/en/latest/"
+              class="btn btn--primary"
+            >
+              <img
+                class="btn__img book"
+                src="index_files/book1.svg"
+                alt="book"
+              />
+              Documentation
+            </a>
+            <a
+              href="https://github.com/EthWorks/Waffle"
+              target="_blank"
+              class="btn btn--primary"
+            >
+              <img class="btn__img" src="index_files/github.svg" alt="github" />
+              View on Github
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section philosophy">
+        <div class="container">
+          <h2 class="section-title philosophy__title">Philosophy</h2>
+          <ul class="advantages-list">
+            <li class="advantage">
+              <div class="advantage-img-wrapper">
+                <img
+                  src="index_files/simpler.svg"
+                  alt="bitten waffle"
+                  class="advantage-img"
+                />
+              </div>
+              <h3 class="advantage__title">Simpler</h3>
+              <p class="advantage__text">Minimalistic, fewer dependencies.</p>
+            </li>
+            <li class="advantage">
+              <div class="advantage-img-wrapper">
+                <img
+                  src="index_files/sweeter.svg"
+                  alt="waffle with chocolate"
+                  class="advantage-img"
+                />
+              </div>
+              <h3 class="advantage__title">Sweeter</h3>
+              <p class="advantage__text">
+                Nicer syntax, easy to learn, and easy to extend.
+              </p>
+            </li>
+            <li class="advantage">
+              <div class="advantage-img-wrapper">
+                <img
+                  src="index_files/faster.png"
+                  alt="waffle in motion"
+                  class="advantage-img"
+                />
+              </div>
+              <h3 class="advantage__title">Faster</h3>
+              <p class="advantage__text">
+                Faster contract compilation and tests execution.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section features">
+        <div class="container">
+          <h2 class="section-title">Features</h2>
+
+          <div class="tabs">
+            <div
+              class="tabs__buttons tabs__buttons--light features-tabs__buttons"
+            >
+              <button
+                class="tabs__btn features-tabs__btn tabs__btn--light active"
+                data-id="matchers"
+              >
+                <span class="tabs__btn-text">Sweet matchers</span>
+              </button>
+              <button
+                class="tabs__btn features-tabs__btn tabs__btn--light"
+                data-id="expectations"
+              >
+                <span class="tabs__btn-text"
+                  >Mocking and testing expectations
+                </span>
+              </button>
+              <button
+                class="tabs__btn features-tabs__btn tabs__btn--light"
+                data-id="fixtures"
+              >
+                <span class="tabs__btn-text">Fixtures</span>
+              </button>
+            </div>
+            <div
+              hidden=""
+              id="matchers"
+              class="tabs__content visible features-tabs__content"
+            >
+              <h3 class="features-tabs__title">Sweet matchers</h3>
+              <pre
+                class="pre scrolling-wrapper"
+              >					<code class="code hljs javascript"><span class="hljs-keyword">await</span> expect(token.transfer(walletTo.address, <span class="hljs-number">7</span>))
 	.to.emit(token, <span class="hljs-string">'Transfer'</span>)
 	.withArgs(wallet.address, walletTo.address, <span class="hljs-number">7</span>);
 
 </code></pre>
-<pre class="pre scrolling-wrapper">	<code class="code hljs javascript"><span class="hljs-keyword">await</span> expect(token.transfer(walletTo.address, <span class="hljs-number">1007</span>)).to.be.reverted;</code>
+              <pre
+                class="pre scrolling-wrapper"
+              >	<code class="code hljs javascript"><span class="hljs-keyword">await</span> expect(token.transfer(walletTo.address, <span class="hljs-number">1007</span>)).to.be.reverted;</code>
 </pre>
-					</div>
-					<div hidden="" id="expectations" class="tabs__content features-tabs__content">
-						<h3 class="features-tabs__title">Mocking and testing expectations</h3>
-						<pre class="pre scrolling-wrapper"><code class="code hljs javascript">
+            </div>
+            <div
+              hidden=""
+              id="expectations"
+              class="tabs__content features-tabs__content"
+            >
+              <h3 class="features-tabs__title">
+                Mocking and testing expectations
+              </h3>
+              <pre
+                class="pre scrolling-wrapper"
+              ><code class="code hljs javascript">
 mockERC20 = <span class="hljs-keyword">await</span> deployMockContract(wallet, IERC20.abi);
 <span class="hljs-keyword">await</span> mockERC20.mock.balanceOf.returns(parseEther(<span class="hljs-string">'999999'</span>));
 expect(<span class="hljs-string">'balanceOf'</span>).to.be
   .calledOnContractWith(ERC20, [wallet.address]);						 
 						</code></pre>
-					</div>
-					<div hidden="" id="fixtures" class="tabs__content features-tabs__content">
-						<h3 class="features-tabs__title">Fixtures</h3>
-						<pre class="pre scrolling-wrapper"><code class="code hljs javascript">
+            </div>
+            <div
+              hidden=""
+              id="fixtures"
+              class="tabs__content features-tabs__content"
+            >
+              <h3 class="features-tabs__title">Fixtures</h3>
+              <pre
+                class="pre scrolling-wrapper"
+              ><code class="code hljs javascript">
 <span class="hljs-keyword">const</span> {token, wallet} = <span class="hljs-keyword">await</span> loadFixture(tokenFixture);
 expect(<span class="hljs-keyword">await</span> token.balanceOf(wallet.address)).to.equal(<span class="hljs-number">1000</span>);</code>
 						</pre>
-					</div>
-				</div>
-				
-				<ul class="features-list">
-					<li class="features-list__item">
-						<div class="features-list__row">
-							<img class="solidity-logo" src="index_files/solidity@1x.png" srcset="index_files/solidity@2x.png 1x" alt="solidity">
-							<img class="vyper-logo" src="index_files/vyper@1x.png" srcset="index_files/vyper@2x.png 1x" alt="vyper">
-						</div>
-						<p class="features-list__text">Compiles Solidity &amp; Vyper</p>
-					</li>
-					<li class="features-list__item">
-						<img class="ens-logo" src="index_files/ens@1x.png" srcset="index_files/ens@2x_002.png 1x" alt="ens">
-						<p class="features-list__text">Write tests with ENS</p>
-					</li>
-					<li class="features-list__item">
-						<img class="builder-logo" src="index_files/hardhat.png" srcset="index_files/hardhat@2x.png 1x" alt="nomiclabs">
-						<p class="features-list__text">Works with Hardhat</p>
-					</li>
-				</ul>
-				
-			</div>
-		</section>
-		<section class="section example">
-			<div class="container">
-				<h2 class="section-title example__title">Example code</h2>
-				<p class="code-title">Below is an example contract, that delivers from standard ERC20 token:</p>
-				<pre class="pre scrolling-wrapper first">					<code class="code hljs javascript">
+            </div>
+          </div>
+
+          <ul class="features-list">
+            <li class="features-list__item">
+              <div class="features-list__row">
+                <img
+                  class="solidity-logo"
+                  src="index_files/solidity@1x.png"
+                  srcset="index_files/solidity@2x.png 1x"
+                  alt="solidity"
+                />
+                <img
+                  class="vyper-logo"
+                  src="index_files/vyper@1x.png"
+                  srcset="index_files/vyper@2x.png 1x"
+                  alt="vyper"
+                />
+              </div>
+              <p class="features-list__text">Compiles Solidity &amp; Vyper</p>
+            </li>
+            <li class="features-list__item">
+              <img
+                class="ens-logo"
+                src="index_files/ens@1x.png"
+                srcset="index_files/ens@2x_002.png 1x"
+                alt="ens"
+              />
+              <p class="features-list__text">Write tests with ENS</p>
+            </li>
+            <li class="features-list__item">
+              <img
+                class="builder-logo"
+                src="index_files/hardhat.png"
+                srcset="index_files/hardhat@2x.png 1x"
+                alt="nomiclabs"
+              />
+              <p class="features-list__text">Works with Hardhat</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section example">
+        <div class="container">
+          <h2 class="section-title example__title">Example code</h2>
+          <p class="code-title">
+            Below is an example contract, that delivers from standard ERC20
+            token:
+          </p>
+          <pre
+            class="pre scrolling-wrapper first"
+          >					<code class="code hljs javascript">
 pragma solidity ^<span class="hljs-number">0.6</span><span class="hljs-number">.0</span>;
 
 <span class="hljs-keyword">import</span> <span class="hljs-string">"@openzeppelin/contracts/token/ERC20/ERC20.sol"</span>;
@@ -278,8 +521,13 @@ contract BasicToken is ERC20 {
 }
 					</code>
 				</pre>
-				<p class="code-title">Belows is example test written for the contract above written with Waffle. </p>
-				<pre class="pre scrolling-wrapper second">					<code class="code hljs javascript">
+          <p class="code-title">
+            Belows is example test written for the contract above written with
+            Waffle.
+          </p>
+          <pre
+            class="pre scrolling-wrapper second"
+          >					<code class="code hljs javascript">
 <span class="hljs-keyword">import</span> {expect, use} <span class="hljs-keyword">from</span> <span class="hljs-string">'chai'</span>;
 <span class="hljs-keyword">import</span> {Contract} <span class="hljs-keyword">from</span> <span class="hljs-string">'ethers'</span>;
 <span class="hljs-keyword">import</span> {deployContract, MockProvider, solidity} <span class="hljs-keyword">from</span> <span class="hljs-string">'ethereum-waffle'</span>;
@@ -333,196 +581,439 @@ describe(<span class="hljs-string">'BasicToken'</span>, () =&gt; {
 					</code>
 				</pre>
 
-				<p class="section__reference example__reference">More examples available on our <a href="https://github.com/EthWorks/Waffle/tree/master/examples" target="_blank" class="link">GitHub</a></p>
-			</div>
-		</section>
-		<section class="guide">
-			<div class="container">
-				<h2 class="section-title guide__title">How to install</h2>
+          <p class="section__reference example__reference">
+            More examples available on our
+            <a
+              href="https://github.com/EthWorks/Waffle/tree/master/examples"
+              target="_blank"
+              class="link"
+              >GitHub</a
+            >
+          </p>
+        </div>
+      </section>
+      <section class="guide">
+        <div class="container">
+          <h2 class="section-title guide__title">How to install</h2>
 
-				<div class="tabs__buttons tabs__buttons--dark">
-					<button class="tabs__btn guide-tabs__btn tabs__btn--dark active" data-id="npm">
-						<span class="tabs__btn-text">Npm</span>
-					</button>
-					<button class="tabs__btn guide-tabs__btn tabs__btn--dark" data-id="yarn">
-						<span class="tabs__btn-text">Yarn</span>
-					</button>
-					<button class="tabs__btn guide-tabs__btn tabs__btn--dark" data-id="builder">
-						<span class="tabs__btn-text">Hardhat</span>
-					</button>
-				</div>
-				<div id="npm" class="guide-tabs__content tabs__content visible">
-					<p class="guide-label">To start using with npm, type:</p>
-					<p class="guide-command">npm i ethereum-waffle</p>
-					<div class="guide__buttons-row">
-						<a href="https://ethereum-waffle.readthedocs.io/en/latest/" class="btn btn--secondary">
-							<img class="btn__img book" src="index_files/book1.svg" alt="book">
-							Documentation
-						</a>
-						<a href="https://github.com/EthWorks/waffle" class="btn btn--secondary">
-							<img class="btn__img" src="index_files/github.svg" alt="github">
-							View on Github
-						</a>
-					</div>
-				</div>
-				<div id="yarn" class="guide-tabs__content tabs__content">
-					<p class="guide-label">To start using with yarn, type:</p>
-					<p class="guide-command">yarn add ethereum-waffle</p>
-					<div class="guide__buttons-row">
-						<a target="_blank" href="https://ethereum-waffle.readthedocs.io/en/latest/" class="btn btn--secondary">
-							<img class="btn__img book" src="index_files/book1.svg" alt="book">
-							Documentation
-						</a>
-						<a target="_blank" href="https://github.com/EthWorks/waffle" class="btn btn--secondary">
-							<img class="btn__img" src="index_files/github.svg" alt="github">
-							View on Github
-						</a>
-					</div>
-				</div>
-				<div id="builder" class="guide-tabs__content tabs__content">
-					<div class="guide__buttons-row">
-						<a target="_blank" href="https://hardhat.org/tutorial/" class="btn btn--secondary">Documentation</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="solution">
-			<div class="container">
-				<h2 class="section-title">Patterns and solutions</h2>
-				<div class="solution__row">
-					<a target="_blank" href="https://medium.com/ethworks/mocking-solidity-smart-contracts-with-waffle-55813b22ebf2" class="solution__link">Dynamic mocking</a>
-					<span class="divider"></span>
-					<a target="_blank" href="https://medium.com/ethworks/new-waffle-matcher-expect-to-be-calledoncontract-50dbd2a71a78" class="solution__link">Testing the effects of a call</a>
-					<span class="divider divider--tablet-hidden"></span>
-					<a target="_blank" href="https://medium.com/ethworks/smart-contract-testing-with-ens-and-waffle-97dd659f05a7" class="solution__link">Testing with ENS</a>					
-					<span class="divider"></span>
-					<a class="solution__link solution__link--disabled">Fixtures (<b>coming soon</b>)</a>
-				</div>
-			</div>
-		</section>
-		<section class="section materials">
-			<div class="container">
-				<h2 class="section-title materials__title">Materials</h2>
-				<div class="columns">
-					<div class="column">
-						<h3 class="column__title">Blogpost on Ethworks blog</h3>
-						<ul class="column__list">
-							<li class="column__item">
-								<a href="https://medium.com/ethworks/introducing-waffle-support-for-jest-experimental-331f39d630bd" target="_blank" class="column__link">Introducing Waffle support for Jest (experimental)</a>
-							</li>
-							<li class="column__item">
-								<a href="https://medium.com/ethworks/smart-contract-testing-with-ens-and-waffle-97dd659f05a7" target="_blank" class="column__link">Smart contract testing with ENS and Waffle</a>
-							</li>
-							<li class="column__item">
-								<a href="https://medium.com/ethworks/waffle-3-0-released-with-ethers-js-5-0-and-more-fc76d5232ae4" target="_blank" class="column__link">🧇 Waffle 3.0 released! With ethers.js 5.0 and more!</a>
-							</li>
-							<li class="column__item">
-								<a href="https://medium.com/ethworks/new-waffle-matcher-expect-to-be-calledoncontract-50dbd2a71a78" target="_blank" class="column__link">New Waffle matcher: expect().to.be.calledOnContract()</a>
-							</li>
-							<li class="column__item">
-								<a href="https://medium.com/ethworks/mocking-solidity-smart-contracts-with-waffle-55813b22ebf2" target="_blank" class="column__link">Mocking Solidity smart contracts with Waffle</a>
-							</li>
-							<li class="column__item">
-								<a href="https://medium.com/ethworks/meet-waffle-8e630e5e9e91" target="_blank" class="column__link">Introducing Waffle</a>
-							</li>
-							<li class="column__item">
-								<a href="https://medium.com/ethworks/waffle-2-0-released-93b9db6e67ea" target="_blank" class="column__link">Waffle 2.0 released</a>
-							</li>
-							<li class="column__item">
-								<a href="https://medium.com/ethworks/smart-contracts-testing-still-sucks-how-want-to-make-it-better-7c38d5ce7fc9" target="_blank" class="column__link">Smart Contracts testing still sucks, how we want to make it better</a>
-							</li>
-						</ul>
-					</div>
-					<div class="column">
-						<h3 class="column__title">Tutorials on Ethereum.org</h3>
-						<ul class="column__list">
-							<li class="column__item">
-								<a href="https://ethereum.org/en/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/" target="_blank" class="column__link">Waffle: Dynamic mocking and testing contract calls</a>
-							</li>
-							<li class="column__item">
-								<a href="https://ethereum.org/en/developers/tutorials/Waffle-hello-world-with-buidler-tutorial/" target="_blank" class="column__link">Waffle say hello world tutorial with hardhat and ethers</a>
-							</li>
-							<li class="column__item">
-								<a href="https://ethereum.org/en/developers/tutorials/testing-smart-contract-with-waffle/" target="_blank" class="column__link">Testing smart contracts with Waffle</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="created">
-			<div class="container">
-				<div class="created__list">
-					<div>
-						<h2 class="created-title"><span class="text-bg-highlight">Waffle is created by</span></h2>
-						<a href="https://twitter.com/TrueFiEng" target="_blank" rel="noopener noreferrer" class="created__link" title="TrueFi Engineering">
-							<div class="created__picture">
-								<svg class="created__image" viewBox="0 0 152 47" fill="none" color="currentColor">
-									<path d="M79.1637 35.0887V33.3585H72.5312V43.7398H79.1637V42.0096H74.348V39.4142H78.2986V37.684H74.348V35.0887H79.1637Z" fill="currentColor"></path>
-									<path d="M80.6107 43.7398H82.341V39.4142C82.341 38.304 83.0619 37.5254 84.0856 37.5254C84.893 37.5254 85.3977 38.1022 85.3977 39.2556V43.7398H87.1279V39.0538C87.1279 36.8622 85.8879 35.9538 84.5037 35.9538C83.4944 35.9538 82.7303 36.4729 82.3698 37.0352H82.341V36.098H80.6107V43.7398Z" fill="currentColor"></path>
-									<path d="M94.239 36.098V36.9919H94.2101C93.4892 36.3143 92.8692 35.9827 91.9032 35.9827C89.9279 35.9827 88.5004 37.4822 88.5004 39.7314C88.5004 41.9807 89.9279 43.4802 91.9032 43.4802C92.8692 43.4802 93.4892 43.1486 94.2101 42.4709H94.239V42.8026C94.239 44.2444 93.6334 45.2681 92.2348 45.2681C91.3985 45.2681 90.6776 44.8644 90.4037 43.8695L88.6158 44.1291C89.106 45.8016 90.3892 46.7676 92.206 46.7676C94.412 46.7676 95.9692 45.2249 95.9692 42.6584V36.098H94.239ZM92.2781 41.8942C91.1823 41.8942 90.2883 41.0435 90.2883 39.7314C90.2883 38.4194 91.1823 37.5687 92.2781 37.5687C93.3739 37.5687 94.2678 38.4194 94.2678 39.7314C94.2678 41.0435 93.3739 41.8942 92.2781 41.8942Z" fill="currentColor"></path>
-									<path d="M98.6681 35.305C99.3169 35.305 99.8216 34.8003 99.8216 34.1515C99.8216 33.5171 99.3169 32.998 98.6681 32.998C98.0193 32.998 97.5146 33.5171 97.5146 34.1515C97.5146 34.8003 98.0193 35.305 98.6681 35.305ZM97.803 43.7398H99.5332V36.098H97.803V43.7398Z" fill="currentColor"></path>
-									<path d="M101.379 43.7398H103.11V39.4142C103.11 38.304 103.831 37.5254 104.854 37.5254C105.662 37.5254 106.166 38.1022 106.166 39.2556V43.7398H107.897V39.0538C107.897 36.8622 106.657 35.9538 105.272 35.9538C104.263 35.9538 103.499 36.4729 103.138 37.0352H103.11V36.098H101.379V43.7398Z" fill="currentColor"></path>
-									<path d="M113.104 42.3556C112.124 42.3556 111.259 41.7068 111.129 40.4812H116.781C116.781 37.3957 114.979 35.9538 112.96 35.9538C110.884 35.9538 109.255 37.5398 109.255 39.9189C109.255 42.2979 110.884 43.884 113.09 43.884C114.633 43.884 115.887 43.2784 116.608 41.5337L114.806 41.2886C114.517 41.9519 113.912 42.3556 113.104 42.3556ZM112.989 37.4966C113.897 37.4966 114.676 38.1887 114.863 39.1547H111.115C111.302 38.1887 112.081 37.4966 112.989 37.4966Z" fill="currentColor"></path>
-									<path d="M121.595 42.3556C120.615 42.3556 119.749 41.7068 119.62 40.4812H125.272C125.272 37.3957 123.469 35.9538 121.451 35.9538C119.375 35.9538 117.745 37.5398 117.745 39.9189C117.745 42.2979 119.375 43.884 121.581 43.884C123.123 43.884 124.378 43.2784 125.099 41.5337L123.296 41.2886C123.008 41.9519 122.402 42.3556 121.595 42.3556ZM121.48 37.4966C122.388 37.4966 123.167 38.1887 123.354 39.1547H119.605C119.793 38.1887 120.571 37.4966 121.48 37.4966Z" fill="currentColor"></path>
-									<path d="M126.654 43.7398H128.384V39.4575C128.384 38.405 129.105 37.684 130.158 37.684C130.316 37.684 130.576 37.7129 130.792 37.7994V36.1413C130.59 36.0692 130.388 36.0259 130.158 36.0259C129.264 36.0259 128.716 36.4152 128.413 36.9199H128.384V36.098H126.654V43.7398Z" fill="currentColor"></path>
-									<path d="M132.841 35.305C133.49 35.305 133.995 34.8003 133.995 34.1515C133.995 33.5171 133.49 32.998 132.841 32.998C132.193 32.998 131.688 33.5171 131.688 34.1515C131.688 34.8003 132.193 35.305 132.841 35.305ZM131.976 43.7398H133.707V36.098H131.976V43.7398Z" fill="currentColor"></path>
-									<path d="M135.553 43.7398H137.283V39.4142C137.283 38.304 138.004 37.5254 139.028 37.5254C139.835 37.5254 140.34 38.1022 140.34 39.2556V43.7398H142.07V39.0538C142.07 36.8622 140.83 35.9538 139.446 35.9538C138.436 35.9538 137.672 36.4729 137.312 37.0352H137.283V36.098H135.553V43.7398Z" fill="currentColor"></path>
-									<path d="M149.181 36.098V36.9919H149.152C148.431 36.3143 147.811 35.9827 146.845 35.9827C144.87 35.9827 143.442 37.4822 143.442 39.7314C143.442 41.9807 144.87 43.4802 146.845 43.4802C147.811 43.4802 148.431 43.1486 149.152 42.4709H149.181V42.8026C149.181 44.2444 148.575 45.2681 147.177 45.2681C146.341 45.2681 145.62 44.8644 145.346 43.8695L143.558 44.1291C144.048 45.8016 145.331 46.7676 147.148 46.7676C149.354 46.7676 150.911 45.2249 150.911 42.6584V36.098H149.181ZM147.22 41.8942C146.124 41.8942 145.23 41.0435 145.23 39.7314C145.23 38.4194 146.124 37.5687 147.22 37.5687C148.316 37.5687 149.21 38.4194 149.21 39.7314C149.21 41.0435 148.316 41.8942 147.22 41.8942Z" fill="currentColor"></path>
-									<path d="M131.27 20.9894C131.073 21.7027 130.743 22.3512 130.348 22.9349C129.953 23.5834 129.426 24.1022 128.767 24.5561C126.066 26.5665 121.192 26.7611 118.03 23.7779C115.658 21.573 114.736 17.4874 116.185 14.0503C116.91 12.3642 118.293 10.6781 120.467 9.70534C122.97 8.60288 127.12 8.92713 129.36 11.3266C130.875 12.9479 131.666 15.4122 131.468 18.2656C131.468 18.525 131.402 18.7196 131.402 18.7196H119.808C119.808 19.5626 120.204 20.276 120.665 20.8597C121.258 21.6379 122.443 22.2864 123.629 22.3512C124.551 22.4161 125.605 22.2215 126.33 21.7027C126.923 21.2488 127.318 20.6651 127.581 19.9517L131.27 20.9894ZM127.12 15.8013C127.12 14.634 126.33 13.5315 125.408 13.0776C124.222 12.4939 122.707 12.5588 121.653 13.1424C120.665 13.6612 119.94 14.634 119.874 15.8662C121.521 15.8662 123.168 15.8662 124.815 15.8662C125.605 15.8013 126.33 15.8013 127.12 15.8013Z" fill="currentColor"></path>
-									<path d="M74.2234 9.64026V6.00862L78.1758 4.84131V9.64026H81.4694V13.4664H78.1758V20.1461C78.1758 20.8594 78.3075 21.3134 78.6369 21.5728C78.9662 21.8322 79.4273 21.9619 80.0861 21.9619C80.3496 21.9619 80.6131 21.9619 80.8766 21.9619C81.1401 21.9619 81.3377 21.897 81.4694 21.8322V25.399C81.2718 25.4638 80.9424 25.5935 80.5472 25.6584C80.152 25.7232 79.625 25.7881 78.9662 25.7881C77.3853 25.7881 76.1337 25.3341 75.2115 24.4911C74.2892 23.648 73.8281 22.4158 73.8281 20.8594V13.4664H70.9297V9.64026H74.2234Z" fill="currentColor"></path>
-									<path d="M94.8414 13.9204C93.7874 13.7907 92.2723 13.4665 90.5596 14.7635C90.1644 15.0877 89.9009 15.5417 89.6374 16.1253C89.4398 16.709 89.308 17.4223 89.308 18.2654V25.5287H84.8945V9.64027H89.1763C89.1763 10.4185 89.1763 11.1318 89.1763 11.91C89.3739 11.6506 89.5715 11.3264 89.7692 11.067C90.0985 10.7427 90.4279 10.4833 90.7573 10.2239C91.8112 9.57542 93.0628 9.44571 94.2485 9.51056C94.3803 9.51056 94.5779 9.51057 94.7755 9.57542V13.9204H94.8414Z" fill="currentColor"></path>
-									<path d="M108.147 9.64014H112.56V25.5934H108.279V23.6479C107.752 24.4909 107.093 25.0746 106.236 25.4637C104.26 26.3716 101.691 26.2419 99.9785 24.9449C98.3317 23.7127 97.8047 21.7024 97.8047 19.7568V9.64014H102.218V18.9138C102.218 20.5999 103.206 21.9618 104.985 22.0266C105.907 22.0266 106.763 21.7672 107.356 21.1187C108.015 20.4702 108.213 19.6271 108.213 18.7192C108.147 18.8489 108.147 9.64014 108.147 9.64014Z" fill="currentColor"></path>
-									<path d="M140.099 13.3366V25.5934H135.685V13.3366H132.984V9.64008H135.685C135.685 8.01882 135.553 6.39755 136.344 4.90598C136.937 3.73867 137.925 2.83076 139.176 2.31195C139.901 2.05255 140.692 1.92285 141.614 1.92285C142.075 1.92285 142.536 1.92285 142.931 1.9877C143.326 2.05255 143.656 2.1174 143.788 2.2471V5.81389C143.656 5.74904 143.524 5.74904 143.326 5.68419C142.602 5.55449 141.746 5.61934 141.087 6.00845C140.428 6.39755 140.165 7.11091 140.165 7.82426V9.57523H151.034V25.5285H146.686V13.3366H140.099Z" fill="currentColor"></path>
-									<path d="M151.491 4.32245C151.491 3.60909 151.162 2.89573 150.701 2.44178C150.24 1.98783 149.515 1.66357 148.791 1.66357C148.066 1.66357 147.341 1.98783 146.88 2.44178C146.419 2.89573 146.09 3.60909 146.09 4.32245C146.09 5.0358 146.419 5.74916 146.88 6.20311C147.341 6.65707 148.066 6.98132 148.791 6.98132C149.515 6.98132 150.24 6.65707 150.701 6.20311C151.162 5.74916 151.491 5.10065 151.491 4.32245Z" fill="currentColor"></path>
-									<path d="M43.1545 6.09668C41.1422 6.09668 39.2976 7.16355 38.3055 8.88162L25.7121 30.4822H16.3242V41.5666H28.9558C30.9538 41.5666 32.7998 40.5092 33.798 38.7932L46.3685 17.181H55.7312V6.09668H43.1545Z" fill="currentColor"></path>
-									<path d="M9.69918 41.5666L0 36.0382L15.8117 8.88162C16.8026 7.16355 18.6447 6.09668 20.6544 6.09668H33.2144V17.181H23.8642L9.69918 41.5666Z" fill="currentColor"></path>
-									<path d="M50.1022 34.9159C53.2113 34.9159 55.7318 32.4346 55.7318 29.3737C55.7318 26.3129 53.2113 23.8315 50.1022 23.8315C46.9931 23.8315 44.4727 26.3129 44.4727 29.3737C44.4727 32.4346 46.9931 34.9159 50.1022 34.9159Z" fill="currentColor"></path>
-									<path d="M1.125 6.09668V17.181C7.34567 17.181 12.3841 12.2208 12.3841 6.09668H1.125Z" fill="currentColor"></path>
-								</svg>
-							</div>
-						</a>
-					</div>
-					<div>
-						<h2 class="created-title"><span class="text-bg-highlight">Maintained by</span></h2>
-						<a href="https://twitter.com/wallfacerlabs" target="_blank" rel="noopener noreferrer" class="created__link" title="Wallfacer Labs">
-							<div class="created__picture created__picture--large">
-								<svg classname="created__image" viewBox="0 0 2970 405" fill="none" color="currentColor">
-									<path d="M0 327.4V8.6C0 4 3.9 0 8.6 0h34.5c4.7 0 8.6 3.9 8.6 8.6v318.8a25.9 25.9 0 0 0 25.9 25.9h172.3a25.9 25.9 0 0 0 25.8-25.9v-94.9c0-4.7 3.9-8.6 8.7-8.6h34.4c4.8 0 8.6 3.9 8.6 8.6v95A77.6 77.6 0 0 1 250 405H77.6A77.6 77.6 0 0 1 0 327.4Z" fill="currentColor"></path>
-									<path d="M216 0h102.8c4.8 0 8.6 3.9 8.6 8.6v34.5c0 4.7-3.8 8.6-8.6 8.6H216.1a25.9 25.9 0 0 0-25.9 25.9v181.7c0 4.8-3.8 8.6-8.6 8.6h-34.5a8.6 8.6 0 0 1-8.6-8.6V77.6A77.6 77.6 0 0 1 216.1 0Z" fill="currentColor"></path>
-									<path d="M326.4 137.7a25.8 25.8 0 1 1-51.7 0 25.8 25.8 0 0 1 51.7 0ZM1992.7 26.2c-21.7-2.9-36.3 5.5-43.7 25.1-21 55.6-42.6 111.8-63.9 167.2a2 2 0 0 1-2 1.4H1861a1 1 0 0 1-1-1v-.3c23.3-60.8 47.1-122.2 71-183 15.5-39.5 71-47.5 98.3-17a80.2 80.2 0 0 1 12.9 23.2c23.2 58.6 46.4 117.8 69 176.6.4 1 0 1.5-1 1.5H2088c-.9 0-1.7-.7-2-1.6-19.8-51.9-40-104.1-60.1-155.7l-.7-1.6c-6.2-16.1-12.5-32.2-32.4-34.8ZM1597.9 143.7c0-7.6 6.1-13.8 13.7-13.8h155.6c1.1 0 1.7-.6 1.7-1.7l-.2-25.4c0-1-.5-1.6-1.7-1.6h-154.9c-7.7 0-14-6.4-13.8-14l.1-47.2c0-7.6 6.2-13.7 13.8-13.7h8.2c73.5-.2 147-.2 220.2-.1 1.4 0 2.5-1.2 2.4-2.5l-.5-21.6c0-.8-.7-1.5-1.6-1.5-75.6-.2-151.3-.1-227 0-26.6.2-41.1 18.6-41.1 43.8v174c0 1 .5 1.4 1.3 1.4h22.5c.9 0 1.3-.5 1.3-1.3v-74.8ZM572.3 186c0 4.9 3.8 8.8 8.6 8.8l54.5.3c15 0 22.4-7.4 22.5-22.3a20515.8 20515.8 0 0 0 .7-156.8V1.8c0-.6.5-1.2 1.2-1.2h23c.7 0 1.3.6 1.3 1.2V170.5c0 34.7-13.3 49.3-48.2 49.3-77.3.1-129.3.2-156.1 0-9.7 0-21.6 0-30-5.2a38.7 38.7 0 0 1-18.8-35.3V1.8c0-.6.6-1.2 1.3-1.2h22.5c.7 0 1.2.6 1.2 1.3l.1 169.2c0 21.6 11.3 23.7 30.3 23.8h48.3c4.9 0 8.7-4 8.7-8.8l.1-115.4c0-.7.6-1.2 1.3-1.2H571c.7 0 1.2.5 1.2 1.2v115.4ZM806.4 53.3c6.3-15.5 12.8-25.7 29.5-27.5 17.5-1.8 33.8 4.2 40.7 21.7 22.4 57 44.6 114 66.5 171.3.3.7.9 1.1 1.7 1.1h21.7a1.7 1.7 0 0 0 .6-.1c.9-.3 1.3-1.3 1-2.1-22.8-59.1-46-118-69.5-176.8-7.7-19.2-17.3-33.8-38.3-38-29.9-6-51.8 1-65.7 21-3 4.2-9.5 19.3-19.6 45a26306.1 26306.1 0 0 0-58 149.8c0 .7.5 1.2 1.2 1.2l22.4-.1c.8 0 1.4-.5 1.7-1.2a5425.3 5425.3 0 0 1 64.1-165.3Z" fill="currentColor"></path>
-									<path d="m2968.6 217.7-46.2-88c35.4 0 47.2-20.6 47.4-51.5V63c.6-38.8-5.2-62.2-51.5-62.2-66.5-.4-132.5-.5-198-.1-2.4 0-4.3 2-4.3 4.3v212.5c0 1.4 1.2 2.4 2.5 2.4h21.2c1.3 0 1.9-1.3 1.9-2.6v-86c0-.8.7-1.5 1.4-1.5 42.3-.2 137.5-.1 137.5-.1 16 0 17.6 7.3 25.4 20.9l38.4 68.4c.3.6.9.9 1.6.9h21.6c1.3 0 1.6-1.1 1-2.2Zm-223.2-116.9a3.9 3.9 0 0 1-3.9-3.9l.1-67.7c0-2.2 1.8-4 4-3.9l176.8.3c12 0 21.8 8.9 21.8 19.7v36.2c0 10.9-9.9 19.7-22 19.6l-176.8-.3Z" fill="currentColor"></path>
-									<path d="M1002 182.4c.1 24.2 19.4 37.6 41.5 37.6l208.7-.1c1 0 2-.9 2-2v-21.7c0-.9-.5-1.3-1.4-1.3l-202-.1c-17.7 0-23.8-7.8-23.8-25 .1-50.7.2-101.5 0-152.4V1.8c0-.6-.5-1.2-1.2-1.2h-23c-.7 0-1.2.6-1.2 1.2v2.5c0 59 .2 118.4.4 178ZM2144.9 171.3c.6 43.4 22.3 48.4 60 48.5h185.9c.7 0 1.2-.5 1.2-1.2v-22.4c0-.7-.5-1.3-1.2-1.3h-199.2c-17.7 0-21.2-11.8-21.2-27.6-.2-61.7-.2-101.5 0-119.2.4-22 14.4-22 32.4-21.9h188c.7 0 1.2-.6 1.2-1.3V2.4c0-.7-.5-1.3-1.2-1.3h-194c-33.9 0-50.6 8.1-51.4 45a3311 3311 0 0 0-.5 125.2ZM856.5 115.5a14.2 14.2 0 1 1-28.4 0 14.2 14.2 0 0 1 28.4 0ZM1999.6 115.5a14.2 14.2 0 1 1-28.3 0 14.2 14.2 0 0 1 28.3 0ZM1285.4 182.4c.1 24.2 19.3 37.6 41.5 37.6l208.7-.1c1 0 2-.9 2-2v-21.7c0-.9-.5-1.3-1.4-1.3l-202-.1c-17.7 0-23.8-7.2-23.8-24.4V1.9c0-.7-.5-1.2-1.2-1.2h-23c-.7 0-1.3.5-1.3 1.2 0 58.7.3 121.2.5 180.5ZM2432 1.8c0-.6.6-1.2 1.3-1.2h248.1c.7 0 1.3.6 1.3 1.2v22.4c0 .7-.6 1.2-1.3 1.2h-248.1c-.7 0-1.3-.5-1.3-1.2V1.8ZM2488.2 103.1c0-.7.5-1.2 1.2-1.2h136c.7 0 1.2.5 1.2 1.2V128c0 .7-.5 1.2-1.3 1.2h-135.9c-.7 0-1.3-.5-1.3-1.2V103ZM2432 196.3c0-.6.6-1.2 1.3-1.2h248.1c.7 0 1.3.6 1.3 1.2v22.4c0 .7-.6 1.2-1.3 1.2h-248.1c-.7 0-1.3-.5-1.3-1.2v-22.4ZM655.1 309.6c5.7-14.5 11.7-25.2 29.8-21.8 10.8 2.1 15 10.4 19.1 20.7 12.4 31.7 24.5 63.4 36.5 95.1.2.7.7 1 1.4 1h12.2c1.2 0 1.6-.5 1.2-1.7a72545 72545 0 0 1-36.5-94.7l-.1-.4-.5-1.3a79 79 0 0 0-11.5-22.7c-15-17.7-48.8-15.5-58.3 6.5a2377.9 2377.9 0 0 0-44.2 113.3c-.2.7 0 1 .8 1h12.6c.7 0 1-.2 1.3-.8a7881 7881 0 0 1 36.2-94.2Z" fill="currentColor"></path>
-									<path d="M777.7 287.2h124.7c6.1 0 11.1 5.1 11.1 11.3v23.2c0 6.1-5 11.1-11.2 11.2L777 333a1 1 0 0 0-1 1v69.5c0 .6.5 1 1 1h122.3c25 0 29.3-10 29.3-33v-69.7c0-19.7-7.5-29.4-28-29.4H777.4c-.8 0-1.2.4-1.2 1.2l.2 12.2c0 .9.4 1.3 1.3 1.3Zm13.6 100.2v-34.1c0-1.4 1.1-2.6 2.5-2.6h109c6.1 0 11.1 5 11.1 11.2v16.9c0 6.1-5 11.1-11.2 11.1H793.8a2.6 2.6 0 0 1-2.5-2.5Z" fill="currentColor"></path>
-									<path d="M688.1 341.8a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0Z" fill="currentColor"></path>
-									<path d="M431 376.8V273.5c0-.6.5-1 1-1h13.2c.6 0 1 .4 1 1v103.3c0 7 5.7 12.7 12.8 12.7h122.6c.5 0 1 .4 1 1v13.2c0 .6-.5 1-1 1H459a28 28 0 0 1-28-28ZM948 298.8a26.4 26.4 0 0 1 26.3-26.4h125.5c.6 0 1 .4 1 1v14.2c0 .6-.4 1-1 1H974.3c-5.6 0-10.1 4.6-10.1 10.2v24.5c0 5.6 4.5 10.1 10.1 10.1h100.2a26.4 26.4 0 0 1 26.4 26.5V378a26.4 26.4 0 0 1-26.4 26.4H951.3a1 1 0 0 1-1-1v-14.2c0-.6.4-1 1-1h123.2c5.6 0 10.1-4.6 10.1-10.2v-18.2c0-5.6-4.5-8.8-10.1-8.8H974.3c-14.6 0-26.4-13.2-26.4-27.8v-24.5Z" fill="currentColor"></path> 
-								</svg>
-							</div>
-						</a>
-				</div>
-				</div>
-			</div>
-		</section>
-	</main>
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__row">
-				<p class="footer__copy">TrueFi Engineering Copyrights 2020</p>
-				<p class="footer__text">Supported by 
-					<a href="https://ethereum.org/" target="_blank">
-						<img class="footer__image" src="index_files/ethereum-foundation.png" srcset="index_files/ethereum-foundation@2x.png 1x" alt="Ethereum Foundation">
-					</a>
-				</p>
-			</div>
-		</div>
-	</footer>
+          <div class="tabs__buttons tabs__buttons--dark">
+            <button
+              class="tabs__btn guide-tabs__btn tabs__btn--dark active"
+              data-id="npm"
+            >
+              <span class="tabs__btn-text">Npm</span>
+            </button>
+            <button
+              class="tabs__btn guide-tabs__btn tabs__btn--dark"
+              data-id="yarn"
+            >
+              <span class="tabs__btn-text">Yarn</span>
+            </button>
+            <button
+              class="tabs__btn guide-tabs__btn tabs__btn--dark"
+              data-id="builder"
+            >
+              <span class="tabs__btn-text">Hardhat</span>
+            </button>
+          </div>
+          <div id="npm" class="guide-tabs__content tabs__content visible">
+            <p class="guide-label">To start using with npm, type:</p>
+            <p class="guide-command">npm i ethereum-waffle</p>
+            <div class="guide__buttons-row">
+              <a
+                href="https://ethereum-waffle.readthedocs.io/en/latest/"
+                class="btn btn--secondary"
+              >
+                <img
+                  class="btn__img book"
+                  src="index_files/book1.svg"
+                  alt="book"
+                />
+                Documentation
+              </a>
+              <a
+                href="https://github.com/EthWorks/waffle"
+                class="btn btn--secondary"
+              >
+                <img
+                  class="btn__img"
+                  src="index_files/github.svg"
+                  alt="github"
+                />
+                View on Github
+              </a>
+            </div>
+          </div>
+          <div id="yarn" class="guide-tabs__content tabs__content">
+            <p class="guide-label">To start using with yarn, type:</p>
+            <p class="guide-command">yarn add ethereum-waffle</p>
+            <div class="guide__buttons-row">
+              <a
+                target="_blank"
+                href="https://ethereum-waffle.readthedocs.io/en/latest/"
+                class="btn btn--secondary"
+              >
+                <img
+                  class="btn__img book"
+                  src="index_files/book1.svg"
+                  alt="book"
+                />
+                Documentation
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/EthWorks/waffle"
+                class="btn btn--secondary"
+              >
+                <img
+                  class="btn__img"
+                  src="index_files/github.svg"
+                  alt="github"
+                />
+                View on Github
+              </a>
+            </div>
+          </div>
+          <div id="builder" class="guide-tabs__content tabs__content">
+            <div class="guide__buttons-row">
+              <a
+                target="_blank"
+                href="https://hardhat.org/tutorial/"
+                class="btn btn--secondary"
+                >Documentation</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="solution">
+        <div class="container">
+          <h2 class="section-title">Patterns and solutions</h2>
+          <div class="solution__row">
+            <a
+              target="_blank"
+              href="https://medium.com/ethworks/mocking-solidity-smart-contracts-with-waffle-55813b22ebf2"
+              class="solution__link"
+              >Dynamic mocking</a
+            >
+            <span class="divider"></span>
+            <a
+              target="_blank"
+              href="https://medium.com/ethworks/new-waffle-matcher-expect-to-be-calledoncontract-50dbd2a71a78"
+              class="solution__link"
+              >Testing the effects of a call</a
+            >
+            <span class="divider divider--tablet-hidden"></span>
+            <a
+              target="_blank"
+              href="https://medium.com/ethworks/smart-contract-testing-with-ens-and-waffle-97dd659f05a7"
+              class="solution__link"
+              >Testing with ENS</a
+            >
+            <span class="divider"></span>
+            <a class="solution__link solution__link--disabled"
+              >Fixtures (<b>coming soon</b>)</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section materials">
+        <div class="container">
+          <h2 class="section-title materials__title">Materials</h2>
+          <div class="columns">
+            <div class="column">
+              <h3 class="column__title">Blogpost on Ethworks blog</h3>
+              <ul class="column__list">
+                <li class="column__item">
+                  <a
+                    href="https://medium.com/ethworks/introducing-waffle-support-for-jest-experimental-331f39d630bd"
+                    target="_blank"
+                    class="column__link"
+                    >Introducing Waffle support for Jest (experimental)</a
+                  >
+                </li>
+                <li class="column__item">
+                  <a
+                    href="https://medium.com/ethworks/smart-contract-testing-with-ens-and-waffle-97dd659f05a7"
+                    target="_blank"
+                    class="column__link"
+                    >Smart contract testing with ENS and Waffle</a
+                  >
+                </li>
+                <li class="column__item">
+                  <a
+                    href="https://medium.com/ethworks/waffle-3-0-released-with-ethers-js-5-0-and-more-fc76d5232ae4"
+                    target="_blank"
+                    class="column__link"
+                    >🧇 Waffle 3.0 released! With ethers.js 5.0 and more!</a
+                  >
+                </li>
+                <li class="column__item">
+                  <a
+                    href="https://medium.com/ethworks/new-waffle-matcher-expect-to-be-calledoncontract-50dbd2a71a78"
+                    target="_blank"
+                    class="column__link"
+                    >New Waffle matcher: expect().to.be.calledOnContract()</a
+                  >
+                </li>
+                <li class="column__item">
+                  <a
+                    href="https://medium.com/ethworks/mocking-solidity-smart-contracts-with-waffle-55813b22ebf2"
+                    target="_blank"
+                    class="column__link"
+                    >Mocking Solidity smart contracts with Waffle</a
+                  >
+                </li>
+                <li class="column__item">
+                  <a
+                    href="https://medium.com/ethworks/meet-waffle-8e630e5e9e91"
+                    target="_blank"
+                    class="column__link"
+                    >Introducing Waffle</a
+                  >
+                </li>
+                <li class="column__item">
+                  <a
+                    href="https://medium.com/ethworks/waffle-2-0-released-93b9db6e67ea"
+                    target="_blank"
+                    class="column__link"
+                    >Waffle 2.0 released</a
+                  >
+                </li>
+                <li class="column__item">
+                  <a
+                    href="https://medium.com/ethworks/smart-contracts-testing-still-sucks-how-want-to-make-it-better-7c38d5ce7fc9"
+                    target="_blank"
+                    class="column__link"
+                    >Smart Contracts testing still sucks, how we want to make it
+                    better</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3 class="column__title">Tutorials on Ethereum.org</h3>
+              <ul class="column__list">
+                <li class="column__item">
+                  <a
+                    href="https://ethereum.org/en/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/"
+                    target="_blank"
+                    class="column__link"
+                    >Waffle: Dynamic mocking and testing contract calls</a
+                  >
+                </li>
+                <li class="column__item">
+                  <a
+                    href="https://ethereum.org/en/developers/tutorials/Waffle-hello-world-with-buidler-tutorial/"
+                    target="_blank"
+                    class="column__link"
+                    >Waffle say hello world tutorial with hardhat and ethers</a
+                  >
+                </li>
+                <li class="column__item">
+                  <a
+                    href="https://ethereum.org/en/developers/tutorials/testing-smart-contract-with-waffle/"
+                    target="_blank"
+                    class="column__link"
+                    >Testing smart contracts with Waffle</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="created">
+        <div class="container">
+          <div class="created__list">
+            <div>
+              <h2 class="created-title">
+                <span class="text-bg-highlight">Waffle is created by</span>
+              </h2>
+              <a
+                href="https://twitter.com/TrueFiEng"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="created__link"
+                title="TrueFi Engineering"
+              >
+                <div class="created__picture">
+                  <svg
+                    class="created__image"
+                    viewBox="0 0 152 47"
+                    fill="none"
+                    color="currentColor"
+                  >
+                    <path
+                      d="M79.1637 35.0887V33.3585H72.5312V43.7398H79.1637V42.0096H74.348V39.4142H78.2986V37.684H74.348V35.0887H79.1637Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M80.6107 43.7398H82.341V39.4142C82.341 38.304 83.0619 37.5254 84.0856 37.5254C84.893 37.5254 85.3977 38.1022 85.3977 39.2556V43.7398H87.1279V39.0538C87.1279 36.8622 85.8879 35.9538 84.5037 35.9538C83.4944 35.9538 82.7303 36.4729 82.3698 37.0352H82.341V36.098H80.6107V43.7398Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M94.239 36.098V36.9919H94.2101C93.4892 36.3143 92.8692 35.9827 91.9032 35.9827C89.9279 35.9827 88.5004 37.4822 88.5004 39.7314C88.5004 41.9807 89.9279 43.4802 91.9032 43.4802C92.8692 43.4802 93.4892 43.1486 94.2101 42.4709H94.239V42.8026C94.239 44.2444 93.6334 45.2681 92.2348 45.2681C91.3985 45.2681 90.6776 44.8644 90.4037 43.8695L88.6158 44.1291C89.106 45.8016 90.3892 46.7676 92.206 46.7676C94.412 46.7676 95.9692 45.2249 95.9692 42.6584V36.098H94.239ZM92.2781 41.8942C91.1823 41.8942 90.2883 41.0435 90.2883 39.7314C90.2883 38.4194 91.1823 37.5687 92.2781 37.5687C93.3739 37.5687 94.2678 38.4194 94.2678 39.7314C94.2678 41.0435 93.3739 41.8942 92.2781 41.8942Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M98.6681 35.305C99.3169 35.305 99.8216 34.8003 99.8216 34.1515C99.8216 33.5171 99.3169 32.998 98.6681 32.998C98.0193 32.998 97.5146 33.5171 97.5146 34.1515C97.5146 34.8003 98.0193 35.305 98.6681 35.305ZM97.803 43.7398H99.5332V36.098H97.803V43.7398Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M101.379 43.7398H103.11V39.4142C103.11 38.304 103.831 37.5254 104.854 37.5254C105.662 37.5254 106.166 38.1022 106.166 39.2556V43.7398H107.897V39.0538C107.897 36.8622 106.657 35.9538 105.272 35.9538C104.263 35.9538 103.499 36.4729 103.138 37.0352H103.11V36.098H101.379V43.7398Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M113.104 42.3556C112.124 42.3556 111.259 41.7068 111.129 40.4812H116.781C116.781 37.3957 114.979 35.9538 112.96 35.9538C110.884 35.9538 109.255 37.5398 109.255 39.9189C109.255 42.2979 110.884 43.884 113.09 43.884C114.633 43.884 115.887 43.2784 116.608 41.5337L114.806 41.2886C114.517 41.9519 113.912 42.3556 113.104 42.3556ZM112.989 37.4966C113.897 37.4966 114.676 38.1887 114.863 39.1547H111.115C111.302 38.1887 112.081 37.4966 112.989 37.4966Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M121.595 42.3556C120.615 42.3556 119.749 41.7068 119.62 40.4812H125.272C125.272 37.3957 123.469 35.9538 121.451 35.9538C119.375 35.9538 117.745 37.5398 117.745 39.9189C117.745 42.2979 119.375 43.884 121.581 43.884C123.123 43.884 124.378 43.2784 125.099 41.5337L123.296 41.2886C123.008 41.9519 122.402 42.3556 121.595 42.3556ZM121.48 37.4966C122.388 37.4966 123.167 38.1887 123.354 39.1547H119.605C119.793 38.1887 120.571 37.4966 121.48 37.4966Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M126.654 43.7398H128.384V39.4575C128.384 38.405 129.105 37.684 130.158 37.684C130.316 37.684 130.576 37.7129 130.792 37.7994V36.1413C130.59 36.0692 130.388 36.0259 130.158 36.0259C129.264 36.0259 128.716 36.4152 128.413 36.9199H128.384V36.098H126.654V43.7398Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M132.841 35.305C133.49 35.305 133.995 34.8003 133.995 34.1515C133.995 33.5171 133.49 32.998 132.841 32.998C132.193 32.998 131.688 33.5171 131.688 34.1515C131.688 34.8003 132.193 35.305 132.841 35.305ZM131.976 43.7398H133.707V36.098H131.976V43.7398Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M135.553 43.7398H137.283V39.4142C137.283 38.304 138.004 37.5254 139.028 37.5254C139.835 37.5254 140.34 38.1022 140.34 39.2556V43.7398H142.07V39.0538C142.07 36.8622 140.83 35.9538 139.446 35.9538C138.436 35.9538 137.672 36.4729 137.312 37.0352H137.283V36.098H135.553V43.7398Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M149.181 36.098V36.9919H149.152C148.431 36.3143 147.811 35.9827 146.845 35.9827C144.87 35.9827 143.442 37.4822 143.442 39.7314C143.442 41.9807 144.87 43.4802 146.845 43.4802C147.811 43.4802 148.431 43.1486 149.152 42.4709H149.181V42.8026C149.181 44.2444 148.575 45.2681 147.177 45.2681C146.341 45.2681 145.62 44.8644 145.346 43.8695L143.558 44.1291C144.048 45.8016 145.331 46.7676 147.148 46.7676C149.354 46.7676 150.911 45.2249 150.911 42.6584V36.098H149.181ZM147.22 41.8942C146.124 41.8942 145.23 41.0435 145.23 39.7314C145.23 38.4194 146.124 37.5687 147.22 37.5687C148.316 37.5687 149.21 38.4194 149.21 39.7314C149.21 41.0435 148.316 41.8942 147.22 41.8942Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M131.27 20.9894C131.073 21.7027 130.743 22.3512 130.348 22.9349C129.953 23.5834 129.426 24.1022 128.767 24.5561C126.066 26.5665 121.192 26.7611 118.03 23.7779C115.658 21.573 114.736 17.4874 116.185 14.0503C116.91 12.3642 118.293 10.6781 120.467 9.70534C122.97 8.60288 127.12 8.92713 129.36 11.3266C130.875 12.9479 131.666 15.4122 131.468 18.2656C131.468 18.525 131.402 18.7196 131.402 18.7196H119.808C119.808 19.5626 120.204 20.276 120.665 20.8597C121.258 21.6379 122.443 22.2864 123.629 22.3512C124.551 22.4161 125.605 22.2215 126.33 21.7027C126.923 21.2488 127.318 20.6651 127.581 19.9517L131.27 20.9894ZM127.12 15.8013C127.12 14.634 126.33 13.5315 125.408 13.0776C124.222 12.4939 122.707 12.5588 121.653 13.1424C120.665 13.6612 119.94 14.634 119.874 15.8662C121.521 15.8662 123.168 15.8662 124.815 15.8662C125.605 15.8013 126.33 15.8013 127.12 15.8013Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M74.2234 9.64026V6.00862L78.1758 4.84131V9.64026H81.4694V13.4664H78.1758V20.1461C78.1758 20.8594 78.3075 21.3134 78.6369 21.5728C78.9662 21.8322 79.4273 21.9619 80.0861 21.9619C80.3496 21.9619 80.6131 21.9619 80.8766 21.9619C81.1401 21.9619 81.3377 21.897 81.4694 21.8322V25.399C81.2718 25.4638 80.9424 25.5935 80.5472 25.6584C80.152 25.7232 79.625 25.7881 78.9662 25.7881C77.3853 25.7881 76.1337 25.3341 75.2115 24.4911C74.2892 23.648 73.8281 22.4158 73.8281 20.8594V13.4664H70.9297V9.64026H74.2234Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M94.8414 13.9204C93.7874 13.7907 92.2723 13.4665 90.5596 14.7635C90.1644 15.0877 89.9009 15.5417 89.6374 16.1253C89.4398 16.709 89.308 17.4223 89.308 18.2654V25.5287H84.8945V9.64027H89.1763C89.1763 10.4185 89.1763 11.1318 89.1763 11.91C89.3739 11.6506 89.5715 11.3264 89.7692 11.067C90.0985 10.7427 90.4279 10.4833 90.7573 10.2239C91.8112 9.57542 93.0628 9.44571 94.2485 9.51056C94.3803 9.51056 94.5779 9.51057 94.7755 9.57542V13.9204H94.8414Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M108.147 9.64014H112.56V25.5934H108.279V23.6479C107.752 24.4909 107.093 25.0746 106.236 25.4637C104.26 26.3716 101.691 26.2419 99.9785 24.9449C98.3317 23.7127 97.8047 21.7024 97.8047 19.7568V9.64014H102.218V18.9138C102.218 20.5999 103.206 21.9618 104.985 22.0266C105.907 22.0266 106.763 21.7672 107.356 21.1187C108.015 20.4702 108.213 19.6271 108.213 18.7192C108.147 18.8489 108.147 9.64014 108.147 9.64014Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M140.099 13.3366V25.5934H135.685V13.3366H132.984V9.64008H135.685C135.685 8.01882 135.553 6.39755 136.344 4.90598C136.937 3.73867 137.925 2.83076 139.176 2.31195C139.901 2.05255 140.692 1.92285 141.614 1.92285C142.075 1.92285 142.536 1.92285 142.931 1.9877C143.326 2.05255 143.656 2.1174 143.788 2.2471V5.81389C143.656 5.74904 143.524 5.74904 143.326 5.68419C142.602 5.55449 141.746 5.61934 141.087 6.00845C140.428 6.39755 140.165 7.11091 140.165 7.82426V9.57523H151.034V25.5285H146.686V13.3366H140.099Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M151.491 4.32245C151.491 3.60909 151.162 2.89573 150.701 2.44178C150.24 1.98783 149.515 1.66357 148.791 1.66357C148.066 1.66357 147.341 1.98783 146.88 2.44178C146.419 2.89573 146.09 3.60909 146.09 4.32245C146.09 5.0358 146.419 5.74916 146.88 6.20311C147.341 6.65707 148.066 6.98132 148.791 6.98132C149.515 6.98132 150.24 6.65707 150.701 6.20311C151.162 5.74916 151.491 5.10065 151.491 4.32245Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M43.1545 6.09668C41.1422 6.09668 39.2976 7.16355 38.3055 8.88162L25.7121 30.4822H16.3242V41.5666H28.9558C30.9538 41.5666 32.7998 40.5092 33.798 38.7932L46.3685 17.181H55.7312V6.09668H43.1545Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M9.69918 41.5666L0 36.0382L15.8117 8.88162C16.8026 7.16355 18.6447 6.09668 20.6544 6.09668H33.2144V17.181H23.8642L9.69918 41.5666Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M50.1022 34.9159C53.2113 34.9159 55.7318 32.4346 55.7318 29.3737C55.7318 26.3129 53.2113 23.8315 50.1022 23.8315C46.9931 23.8315 44.4727 26.3129 44.4727 29.3737C44.4727 32.4346 46.9931 34.9159 50.1022 34.9159Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M1.125 6.09668V17.181C7.34567 17.181 12.3841 12.2208 12.3841 6.09668H1.125Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div>
+              <h2 class="created-title">
+                <span class="text-bg-highlight">Maintained by</span>
+              </h2>
+              <a
+                href="https://twitter.com/wallfacerlabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="created__link"
+                title="Wallfacer Labs"
+              >
+                <div class="created__picture created__picture--large">
+                  <svg
+                    classname="created__image"
+                    viewBox="0 0 2970 405"
+                    fill="none"
+                    color="currentColor"
+                  >
+                    <path
+                      d="M0 327.4V8.6C0 4 3.9 0 8.6 0h34.5c4.7 0 8.6 3.9 8.6 8.6v318.8a25.9 25.9 0 0 0 25.9 25.9h172.3a25.9 25.9 0 0 0 25.8-25.9v-94.9c0-4.7 3.9-8.6 8.7-8.6h34.4c4.8 0 8.6 3.9 8.6 8.6v95A77.6 77.6 0 0 1 250 405H77.6A77.6 77.6 0 0 1 0 327.4Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M216 0h102.8c4.8 0 8.6 3.9 8.6 8.6v34.5c0 4.7-3.8 8.6-8.6 8.6H216.1a25.9 25.9 0 0 0-25.9 25.9v181.7c0 4.8-3.8 8.6-8.6 8.6h-34.5a8.6 8.6 0 0 1-8.6-8.6V77.6A77.6 77.6 0 0 1 216.1 0Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M326.4 137.7a25.8 25.8 0 1 1-51.7 0 25.8 25.8 0 0 1 51.7 0ZM1992.7 26.2c-21.7-2.9-36.3 5.5-43.7 25.1-21 55.6-42.6 111.8-63.9 167.2a2 2 0 0 1-2 1.4H1861a1 1 0 0 1-1-1v-.3c23.3-60.8 47.1-122.2 71-183 15.5-39.5 71-47.5 98.3-17a80.2 80.2 0 0 1 12.9 23.2c23.2 58.6 46.4 117.8 69 176.6.4 1 0 1.5-1 1.5H2088c-.9 0-1.7-.7-2-1.6-19.8-51.9-40-104.1-60.1-155.7l-.7-1.6c-6.2-16.1-12.5-32.2-32.4-34.8ZM1597.9 143.7c0-7.6 6.1-13.8 13.7-13.8h155.6c1.1 0 1.7-.6 1.7-1.7l-.2-25.4c0-1-.5-1.6-1.7-1.6h-154.9c-7.7 0-14-6.4-13.8-14l.1-47.2c0-7.6 6.2-13.7 13.8-13.7h8.2c73.5-.2 147-.2 220.2-.1 1.4 0 2.5-1.2 2.4-2.5l-.5-21.6c0-.8-.7-1.5-1.6-1.5-75.6-.2-151.3-.1-227 0-26.6.2-41.1 18.6-41.1 43.8v174c0 1 .5 1.4 1.3 1.4h22.5c.9 0 1.3-.5 1.3-1.3v-74.8ZM572.3 186c0 4.9 3.8 8.8 8.6 8.8l54.5.3c15 0 22.4-7.4 22.5-22.3a20515.8 20515.8 0 0 0 .7-156.8V1.8c0-.6.5-1.2 1.2-1.2h23c.7 0 1.3.6 1.3 1.2V170.5c0 34.7-13.3 49.3-48.2 49.3-77.3.1-129.3.2-156.1 0-9.7 0-21.6 0-30-5.2a38.7 38.7 0 0 1-18.8-35.3V1.8c0-.6.6-1.2 1.3-1.2h22.5c.7 0 1.2.6 1.2 1.3l.1 169.2c0 21.6 11.3 23.7 30.3 23.8h48.3c4.9 0 8.7-4 8.7-8.8l.1-115.4c0-.7.6-1.2 1.3-1.2H571c.7 0 1.2.5 1.2 1.2v115.4ZM806.4 53.3c6.3-15.5 12.8-25.7 29.5-27.5 17.5-1.8 33.8 4.2 40.7 21.7 22.4 57 44.6 114 66.5 171.3.3.7.9 1.1 1.7 1.1h21.7a1.7 1.7 0 0 0 .6-.1c.9-.3 1.3-1.3 1-2.1-22.8-59.1-46-118-69.5-176.8-7.7-19.2-17.3-33.8-38.3-38-29.9-6-51.8 1-65.7 21-3 4.2-9.5 19.3-19.6 45a26306.1 26306.1 0 0 0-58 149.8c0 .7.5 1.2 1.2 1.2l22.4-.1c.8 0 1.4-.5 1.7-1.2a5425.3 5425.3 0 0 1 64.1-165.3Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="m2968.6 217.7-46.2-88c35.4 0 47.2-20.6 47.4-51.5V63c.6-38.8-5.2-62.2-51.5-62.2-66.5-.4-132.5-.5-198-.1-2.4 0-4.3 2-4.3 4.3v212.5c0 1.4 1.2 2.4 2.5 2.4h21.2c1.3 0 1.9-1.3 1.9-2.6v-86c0-.8.7-1.5 1.4-1.5 42.3-.2 137.5-.1 137.5-.1 16 0 17.6 7.3 25.4 20.9l38.4 68.4c.3.6.9.9 1.6.9h21.6c1.3 0 1.6-1.1 1-2.2Zm-223.2-116.9a3.9 3.9 0 0 1-3.9-3.9l.1-67.7c0-2.2 1.8-4 4-3.9l176.8.3c12 0 21.8 8.9 21.8 19.7v36.2c0 10.9-9.9 19.7-22 19.6l-176.8-.3Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M1002 182.4c.1 24.2 19.4 37.6 41.5 37.6l208.7-.1c1 0 2-.9 2-2v-21.7c0-.9-.5-1.3-1.4-1.3l-202-.1c-17.7 0-23.8-7.8-23.8-25 .1-50.7.2-101.5 0-152.4V1.8c0-.6-.5-1.2-1.2-1.2h-23c-.7 0-1.2.6-1.2 1.2v2.5c0 59 .2 118.4.4 178ZM2144.9 171.3c.6 43.4 22.3 48.4 60 48.5h185.9c.7 0 1.2-.5 1.2-1.2v-22.4c0-.7-.5-1.3-1.2-1.3h-199.2c-17.7 0-21.2-11.8-21.2-27.6-.2-61.7-.2-101.5 0-119.2.4-22 14.4-22 32.4-21.9h188c.7 0 1.2-.6 1.2-1.3V2.4c0-.7-.5-1.3-1.2-1.3h-194c-33.9 0-50.6 8.1-51.4 45a3311 3311 0 0 0-.5 125.2ZM856.5 115.5a14.2 14.2 0 1 1-28.4 0 14.2 14.2 0 0 1 28.4 0ZM1999.6 115.5a14.2 14.2 0 1 1-28.3 0 14.2 14.2 0 0 1 28.3 0ZM1285.4 182.4c.1 24.2 19.3 37.6 41.5 37.6l208.7-.1c1 0 2-.9 2-2v-21.7c0-.9-.5-1.3-1.4-1.3l-202-.1c-17.7 0-23.8-7.2-23.8-24.4V1.9c0-.7-.5-1.2-1.2-1.2h-23c-.7 0-1.3.5-1.3 1.2 0 58.7.3 121.2.5 180.5ZM2432 1.8c0-.6.6-1.2 1.3-1.2h248.1c.7 0 1.3.6 1.3 1.2v22.4c0 .7-.6 1.2-1.3 1.2h-248.1c-.7 0-1.3-.5-1.3-1.2V1.8ZM2488.2 103.1c0-.7.5-1.2 1.2-1.2h136c.7 0 1.2.5 1.2 1.2V128c0 .7-.5 1.2-1.3 1.2h-135.9c-.7 0-1.3-.5-1.3-1.2V103ZM2432 196.3c0-.6.6-1.2 1.3-1.2h248.1c.7 0 1.3.6 1.3 1.2v22.4c0 .7-.6 1.2-1.3 1.2h-248.1c-.7 0-1.3-.5-1.3-1.2v-22.4ZM655.1 309.6c5.7-14.5 11.7-25.2 29.8-21.8 10.8 2.1 15 10.4 19.1 20.7 12.4 31.7 24.5 63.4 36.5 95.1.2.7.7 1 1.4 1h12.2c1.2 0 1.6-.5 1.2-1.7a72545 72545 0 0 1-36.5-94.7l-.1-.4-.5-1.3a79 79 0 0 0-11.5-22.7c-15-17.7-48.8-15.5-58.3 6.5a2377.9 2377.9 0 0 0-44.2 113.3c-.2.7 0 1 .8 1h12.6c.7 0 1-.2 1.3-.8a7881 7881 0 0 1 36.2-94.2Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M777.7 287.2h124.7c6.1 0 11.1 5.1 11.1 11.3v23.2c0 6.1-5 11.1-11.2 11.2L777 333a1 1 0 0 0-1 1v69.5c0 .6.5 1 1 1h122.3c25 0 29.3-10 29.3-33v-69.7c0-19.7-7.5-29.4-28-29.4H777.4c-.8 0-1.2.4-1.2 1.2l.2 12.2c0 .9.4 1.3 1.3 1.3Zm13.6 100.2v-34.1c0-1.4 1.1-2.6 2.5-2.6h109c6.1 0 11.1 5 11.1 11.2v16.9c0 6.1-5 11.1-11.2 11.1H793.8a2.6 2.6 0 0 1-2.5-2.5Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M688.1 341.8a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0Z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      d="M431 376.8V273.5c0-.6.5-1 1-1h13.2c.6 0 1 .4 1 1v103.3c0 7 5.7 12.7 12.8 12.7h122.6c.5 0 1 .4 1 1v13.2c0 .6-.5 1-1 1H459a28 28 0 0 1-28-28ZM948 298.8a26.4 26.4 0 0 1 26.3-26.4h125.5c.6 0 1 .4 1 1v14.2c0 .6-.4 1-1 1H974.3c-5.6 0-10.1 4.6-10.1 10.2v24.5c0 5.6 4.5 10.1 10.1 10.1h100.2a26.4 26.4 0 0 1 26.4 26.5V378a26.4 26.4 0 0 1-26.4 26.4H951.3a1 1 0 0 1-1-1v-14.2c0-.6.4-1 1-1h123.2c5.6 0 10.1-4.6 10.1-10.2v-18.2c0-5.6-4.5-8.8-10.1-8.8H974.3c-14.6 0-26.4-13.2-26.4-27.8v-24.5Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <p class="footer__copy">TrueFi Engineering / DLTx Copyrights 2024</p>
+          <p class="footer__text">
+            Supported by
+            <a href="https://ethereum.org/" target="_blank">
+              <img
+                class="footer__image"
+                src="index_files/ethereum-foundation.png"
+                srcset="index_files/ethereum-foundation@2x.png 1x"
+                alt="Ethereum Foundation"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
 
-	<link rel="stylesheet" href="index_files/sunburst.css">
-	<script src="index_files/highlight.pack.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
-	<script src="index_files/tabs.js"></script>
-
-
-
-
-</body></html>
+    <link rel="stylesheet" href="index_files/sunburst.css" />
+    <script src="index_files/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="index_files/tabs.js"></script>
+  </body>
+</html>
