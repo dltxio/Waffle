@@ -4,7 +4,7 @@ import type { JsonFragment } from "@ethersproject/abi";
 import DoppelgangerContract from "./Doppelganger.json";
 import type { JsonRpcProvider } from "@ethersproject/providers";
 
-type ABI = string | Array<utils.Fragment | JsonFragment | string>;
+type ABI = string | Array<ethers.Fragment | JsonFragment | string>;
 
 interface StubInterface {
   returns(...args: any): StubInterface;

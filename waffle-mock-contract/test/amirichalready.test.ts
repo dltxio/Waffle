@@ -1,5 +1,5 @@
 import { use, expect } from "chai";
-import { Contract, ContractFactory, utils, Wallet } from "ethers";
+import ethers, { Contract, ContractFactory, Wallet } from "ethers";
 import { MockProvider } from "@ethereum-waffle/provider";
 import { waffleChai } from "@ethereum-waffle/chai";
 import { deployMockContract, MockContract } from "../src";
@@ -28,12 +28,12 @@ describe("Am I Rich Already", () => {
   });
 
   it("returns false if the wallet has less then 1000000 coins", async () => {
-    await mockERC20.mock.balanceOf.returns(utils.parseEther("999999"));
+    await mockERC20.mock.balanceOf.returns(ethers.parseEther("999999"));
     expect(await contract.check()).to.be.equal(false);
   });
 
   it("returns true if the wallet has more than 1000000 coins", async () => {
-    await mockERC20.mock.balanceOf.returns(utils.parseEther("1000001"));
+    await mockERC20.mock.balanceOf.returns(ethers.parseEther("1000001"));
     expect(await contract.check()).to.equal(true);
   });
 
