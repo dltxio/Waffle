@@ -1,4 +1,4 @@
-import { BaseContract, Contract, ContractFactory, Signer, utils } from "ethers";
+import ethers, { BaseContract, Contract, ContractFactory, Signer } from "ethers";
 import type { JsonFragment } from "@ethersproject/abi";
 
 import DoppelgangerContract from "./Doppelganger.json";
@@ -187,8 +187,8 @@ function createMock<T extends BaseContract>(
   abi: ABI,
   mockContractInstance: Contract
 ): MockContract<T>["mock"] {
-  const { functions } = new utils.Interface(abi);
-  const encoder = new utils.AbiCoder();
+  const { functions } = new ethers.Interface(abi);
+  const encoder = new ethers.AbiCoder();
 
   const mockedAbi = Object.values(functions).reduce((acc, func) => {
     const stubbed = new Stub(
@@ -224,16 +224,17 @@ export async function deployMockContract<T extends BaseContract = BaseContract>(
   options?: DeployOptions
 ): Promise<MockContract<T>> {
   const mockContractInstance = await deploy(signer, options);
+  const address = await mockContractInstance.getAddress();
 
   const mock = createMock<T>(abi, mockContractInstance);
   const mockedContract = new Contract(
-    mockContractInstance.address,
+    address,
     abi,
     signer
   ) as MockContract<T>;
   mockedContract.mock = mock;
 
-  const encoder = new utils.AbiCoder();
+  const encoder = new ethers.AbiCoder();
 
   mockedContract.staticcall = async (
     contract: Contract,
@@ -245,7 +246,7 @@ export async function deployMockContract<T extends BaseContract = BaseContract>(
     if (!func) {
       func = Object.values(contract.interface.functions).find(
         (f) => f.name === functionName
-      ) as utils.FunctionFragment;
+      ) as ethers.FunctionFragment;
     }
     if (!func) {
       throw new Error(`Unknown function ${functionName}`);
