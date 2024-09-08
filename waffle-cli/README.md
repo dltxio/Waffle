@@ -1,6 +1,6 @@
-![CI](https://github.com/EthWorks/Waffle/workflows/CI/badge.svg)
+![CI](https://github.com/dltxio/Waffle/workflows/CI/badge.svg)
 [![](https://img.shields.io/npm/v/ethereum-waffle.svg)](https://www.npmjs.com/package/ethereum-waffle)
-[![Discord](https://badgen.net/badge/icon/discord?icon=discord&label)](https://discord.gg/ppFxC3E44X)
+[![Discord](NA)
 
 ![Ethereum Waffle](https://raw.githubusercontent.com/EthWorks/Waffle/master/docs/source/logo.png)
 
@@ -9,7 +9,7 @@ The most advanced framework for testing smart contracts.
 Sweeter, simpler and faster.
 
 ## Links
-* Website - https://getwaffle.io/
+* Website - https://getwaffle2.io/
 * Documentation - https://ethereum-waffle.readthedocs.io/
 
 ## Philosophy
