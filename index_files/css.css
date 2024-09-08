@@ -94,3 +94,37 @@
   src: url(https://fonts.gstatic.com/s/muli/v29/7Auwp_0qiz-afTLGLQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+/* Popup container */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 9999; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+/* Popup content */
+.popup-content {
+  position: relative;
+  background-color: #000; /* Black background */
+  margin: 15% auto; /* Center it */
+  padding: 20px;
+  width: 50%; /* Adjust the width */
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+}

@@ -13,6 +13,16 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="index_files/main.css" />
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn">&times;</span>
+        <h2>Introducing Waffle 2!</h2>
+        <br />
+        <p>This project aims to take over the previous Waffle project</p>
+        <p>The last commit on Waffle 1 was ~March 2023 and there are few dead links.  We aim to update dependencies such as Ethers v6 and keep Waffle alive.</p>
+      </div>
+    </div>
   </head>
 
   <body>
@@ -1013,6 +1023,16 @@ describe(<span class="hljs-string">'BasicToken'</span>, () =&gt; {
     <script src="index_files/highlight.pack.js"></script>
     <script>
       hljs.initHighlightingOnLoad();
+
+      window.onload = function () {
+        // Show the popup on load
+        document.getElementById("popup").style.display = "block";
+
+        // Close the popup when clicking on the close button
+        document.querySelector(".close-btn").onclick = function () {
+          document.getElementById("popup").style.display = "none";
+        };
+      };
     </script>
     <script src="index_files/tabs.js"></script>
   </body>
