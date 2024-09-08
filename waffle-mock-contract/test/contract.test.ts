@@ -22,9 +22,10 @@ describe("Doppelganger - Contract", () => {
         wallet
       );
       const contract = await factory.deploy();
-      const pretender = new Contract(contract.address, Counter.abi, wallet);
+      const address = await contract.getAddress();
+      const pretender = new Contract(address, Counter.abi, wallet);
       const pretenderOverloaded = new Contract(
-        contract.address,
+        address,
         CounterOverloaded.abi,
         wallet
       );
