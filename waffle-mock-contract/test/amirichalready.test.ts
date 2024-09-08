@@ -1,15 +1,15 @@
-import {use, expect} from 'chai';
-import {Contract, ContractFactory, utils, Wallet} from 'ethers';
-import {MockProvider} from '@ethereum-waffle/provider';
-import {waffleChai} from '@ethereum-waffle/chai';
-import {deployMockContract, MockContract} from '../src';
+import { use, expect } from "chai";
+import { Contract, ContractFactory, utils, Wallet } from "ethers";
+import { MockProvider } from "@ethereum-waffle/provider";
+import { waffleChai } from "@ethereum-waffle/chai";
+import { deployMockContract, MockContract } from "../src";
 
-import IERC20 from './helpers/interfaces/IERC20.json';
-import AmIRichAlready from './helpers/interfaces/AmIRichAlready.json';
+import IERC20 from "./helpers/interfaces/IERC20.json";
+import AmIRichAlready from "./helpers/interfaces/AmIRichAlready.json";
 
 use(waffleChai);
 
-describe('Am I Rich Already', () => {
+describe("Am I Rich Already", () => {
   let contractFactory: ContractFactory;
   let sender: Wallet;
   let receiver: Wallet;
@@ -19,28 +19,34 @@ describe('Am I Rich Already', () => {
   beforeEach(async () => {
     [sender, receiver] = new MockProvider().getWallets();
     mockERC20 = await deployMockContract(sender, IERC20.abi);
-    contractFactory = new ContractFactory(AmIRichAlready.abi, AmIRichAlready.bytecode, sender);
+    contractFactory = new ContractFactory(
+      AmIRichAlready.abi,
+      AmIRichAlready.bytecode,
+      sender
+    );
     contract = await contractFactory.deploy(mockERC20.address);
   });
 
-  it('returns false if the wallet has less then 1000000 coins', async () => {
-    await mockERC20.mock.balanceOf.returns(utils.parseEther('999999'));
+  it("returns false if the wallet has less then 1000000 coins", async () => {
+    await mockERC20.mock.balanceOf.returns(utils.parseEther("999999"));
     expect(await contract.check()).to.be.equal(false);
   });
 
-  it('returns true if the wallet has more than 1000000 coins', async () => {
-    await mockERC20.mock.balanceOf.returns(utils.parseEther('1000001'));
+  it("returns true if the wallet has more than 1000000 coins", async () => {
+    await mockERC20.mock.balanceOf.returns(utils.parseEther("1000001"));
     expect(await contract.check()).to.equal(true);
   });
 
-  it('reverts if the ERC20 reverts', async () => {
+  it("reverts if the ERC20 reverts", async () => {
     await mockERC20.mock.balanceOf.reverts();
-    await expect(contract.check()).to.be.revertedWith('Mock revert');
+    await expect(contract.check()).to.be.revertedWith("Mock revert");
   });
 
-  it('returns 1000001 coins for my address and 0 otherwise', async () => {
-    await mockERC20.mock.balanceOf.returns('0');
-    await mockERC20.mock.balanceOf.withArgs(sender.address).returns(utils.parseEther('1000001'));
+  it("returns 1000001 coins for my address and 0 otherwise", async () => {
+    await mockERC20.mock.balanceOf.returns("0");
+    await mockERC20.mock.balanceOf
+      .withArgs(sender.address)
+      .returns(utils.parseEther("1000001"));
 
     expect(await contract.check()).to.equal(true);
     expect(await contract.connect(receiver.address).check()).to.equal(false);
