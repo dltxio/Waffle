@@ -1,7 +1,7 @@
 {
   "name": "waffle-monorepo",
-  "author": "Ethworks",
-  "homepage": "https://getwaffle.io/",
+  "author": "DLTx",
+  "homepage": "https://getwaffle2.io/",
   "private": true,
   "engines": {
     "node": ">=10.0"
