@@ -1,5 +1,10 @@
 # @ethereum-waffle/mock-contract
 
+## 6.0.0
+
+### Major Changes
+- 6.0.0: Update to ethers v6.13
+
 ## 4.0.4
 
 ### Patch Changes

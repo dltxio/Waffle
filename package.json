@@ -4,7 +4,7 @@
   "homepage": "https://getwaffle2.io/",
   "private": true,
   "engines": {
-    "node": ">=10.0"
+    "node": ">=18.19"
   },
   "scripts": {
     "lint": "pnpm run -r lint",
@@ -34,7 +34,6 @@
   "dependencies": {
     "@changesets/cli": "^2.22.0"
   },
-  "packageManager": "pnpm@7.1.9",
   "resolutions": {
     "underscore": ">=1.12.1",
     "lodash": ">=4.17.21",
