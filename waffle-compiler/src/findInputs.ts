@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import {isDirectory} from './utils';
+import fs from "fs";
+import path from "path";
+import { isDirectory } from "./utils";
 
 export function findInputs(sourcePath: string, extension: string) {
   const stack = [sourcePath];

@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import {Config} from './config';
+import fs from "fs";
+import path from "path";
+import { Config } from "./config";
 
 export const readFileContent = (path: string): string =>
   fs.readFileSync(path).toString();
@@ -13,7 +13,7 @@ export const isDirectory = (directoryPath: string) =>
   fs.statSync(path.resolve(directoryPath)).isDirectory();
 
 export const getExtensionForCompilerType = (config: Config) => {
-  return config.compilerType === 'dockerized-vyper' ? '.vy' : '.sol';
+  return config.compilerType === "dockerized-vyper" ? ".vy" : ".sol";
 };
 
 export const insert = (source: string, insertedValue: string, index: number) =>

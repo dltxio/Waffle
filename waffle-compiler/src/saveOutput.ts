@@ -1,8 +1,8 @@
-import {join} from 'path';
-import fs from 'fs';
-import {Config} from './config';
-import {getHumanReadableAbi} from './getHumanReadableAbi';
-import mkdirp from 'mkdirp';
+import { join } from "path";
+import fs from "fs";
+import { Config } from "./config";
+import { getHumanReadableAbi } from "./getHumanReadableAbi";
+import mkdirp from "mkdirp";
 
 export interface BytecodeJson {
   linkReferences: any;
@@ -17,10 +17,10 @@ export interface EvmJson {
 }
 
 export interface ContractJson {
-  'srcmap-runtime'?: string;
+  "srcmap-runtime"?: string;
   srcmap?: string;
   bin?: string;
-  'bin-runtime'?: string;
+  "bin-runtime"?: string;
   abi: any[];
   bytecode?: string;
   humanReadableAbi?: string[];
@@ -29,7 +29,7 @@ export interface ContractJson {
 
 const fsOps = {
   createDirectory: mkdirp.sync,
-  writeFile: fs.writeFileSync
+  writeFile: fs.writeFileSync,
 };
 
 export async function saveOutput(
@@ -37,24 +37,28 @@ export async function saveOutput(
   config: Config,
   filesystem = fsOps
 ) {
-  config.outputType = config.outputType || 'multiple';
+  config.outputType = config.outputType || "multiple";
 
   filesystem.createDirectory(config.outputDirectory);
 
-  if (['multiple', 'all'].includes(config.outputType)) {
+  if (["multiple", "all"].includes(config.outputType)) {
     await saveOutputSingletons(output, config, filesystem);
   }
 
-  if (['combined', 'all'].includes(config.outputType)) {
+  if (["combined", "all"].includes(config.outputType)) {
     await saveOutputCombined(output, config, filesystem);
   }
 
-  if (['minimal'].includes(config.outputType)) {
+  if (["minimal"].includes(config.outputType)) {
     await saveOutputMinimal(output, config, filesystem);
   }
 }
 
-async function saveOutputMinimal(output: any, config: Config, filesystem = fsOps) {
+async function saveOutputMinimal(
+  output: any,
+  config: Config,
+  filesystem = fsOps
+) {
   for (const [, file] of Object.entries<any>(output.contracts)) {
     for (const [contractName, contractJson] of Object.entries<any>(file)) {
       const filePath = join(config.outputDirectory, `${contractName}.json`);
@@ -68,7 +72,7 @@ function getMinimalContent(contractJson: ContractJson, config: Config) {
     ? getHumanReadableAbi(contractJson.abi)
     : contractJson.abi;
   const bytecode = contractJson.evm.bytecode.object;
-  return JSON.stringify({abi, bytecode}, null, 2);
+  return JSON.stringify({ abi, bytecode }, null, 2);
 }
 
 async function saveOutputSingletons(
@@ -92,11 +96,12 @@ async function saveOutputCombined(
   for (const [key, file] of Object.entries<any>(output.contracts)) {
     for (const [contractName, contractJson] of Object.entries<any>(file)) {
       contractJson.bin = contractJson.evm.bytecode.object;
-      contractJson['bin-runtime'] = contractJson.evm.deployedBytecode.object;
+      contractJson["bin-runtime"] = contractJson.evm.deployedBytecode.object;
       contractJson.srcmap = contractJson.evm.bytecode.sourceMap;
-      contractJson['srcmap-runtime'] = contractJson.evm.deployedBytecode.sourceMap;
+      contractJson["srcmap-runtime"] =
+        contractJson.evm.deployedBytecode.sourceMap;
 
-      output.contracts[String(key) + ':' + String(contractName)] = contractJson;
+      output.contracts[String(key) + ":" + String(contractName)] = contractJson;
     }
     delete output.contracts[key];
   }
@@ -112,7 +117,7 @@ async function saveOutputCombined(
   output.sourceList = allSources;
 
   filesystem.writeFile(
-    join(config.outputDirectory, 'Combined-Json.json'),
+    join(config.outputDirectory, "Combined-Json.json"),
     JSON.stringify(output, null, 2)
   );
 }

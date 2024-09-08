@@ -1,11 +1,11 @@
-import {InputConfig, inputToConfig, Config, loadConfig} from './config';
-import {getExtensionForCompilerType} from './utils';
-import {getCompileFunction} from './getCompileFunction';
-import {findInputs} from './findInputs';
-import {saveOutput} from './saveOutput';
-import {ImportsFsEngine, resolvers} from '@resolver-engine/imports-fs';
-import {gatherSources} from '@resolver-engine/imports';
-import {generateTypes} from './generateTypes';
+import { InputConfig, inputToConfig, Config, loadConfig } from "./config";
+import { getExtensionForCompilerType } from "./utils";
+import { getCompileFunction } from "./getCompileFunction";
+import { findInputs } from "./findInputs";
+import { saveOutput } from "./saveOutput";
+import { ImportsFsEngine, resolvers } from "@resolver-engine/imports-fs";
+import { gatherSources } from "@resolver-engine/imports";
+import { generateTypes } from "./generateTypes";
 
 export async function compileProject(configPath?: string) {
   const partialConfig = await loadConfig(configPath);
@@ -33,7 +33,7 @@ async function newCompile(config: Config) {
   );
   const sources = await gatherSources(
     findInputs(config.sourceDirectory, getExtensionForCompilerType(config)),
-    '.',
+    ".",
     resolver
   );
   return getCompileFunction(config)(sources);
@@ -44,20 +44,20 @@ async function processOutput(output: any, config: Config) {
     console.error(formatErrors(output.errors));
   }
   if (anyNonWarningErrors(output.errors)) {
-    throw new Error('Compilation failed');
+    throw new Error("Compilation failed");
   } else {
     await saveOutput(output, config);
   }
 }
 
 function anyNonWarningErrors(errors?: any[]) {
-  return errors && !errors.every(error => error.severity === 'warning');
+  return errors && !errors.every((error) => error.severity === "warning");
 }
 
 function formatErrors(errors: any[]) {
-  return errors.map(toFormattedMessage).join('\n');
+  return errors.map(toFormattedMessage).join("\n");
 }
 
 function toFormattedMessage(error: any) {
-  return typeof error === 'string' ? error : error.formattedMessage;
+  return typeof error === "string" ? error : error.formattedMessage;
 }

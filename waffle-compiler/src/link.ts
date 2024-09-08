@@ -1,4 +1,4 @@
-import {utils} from 'ethers';
+import ethers from "ethers";
 
 export interface LinkableContract {
   evm: {
@@ -8,9 +8,13 @@ export interface LinkableContract {
   };
 }
 
-export function link(contract: LinkableContract, libraryName: string, libraryAddress: string) {
-  const {object} = contract.evm.bytecode;
-  if (object.indexOf('$') >= 0) {
+export function link(
+  contract: LinkableContract,
+  libraryName: string,
+  libraryAddress: string
+) {
+  const { object } = contract.evm.bytecode;
+  if (object.indexOf("$") >= 0) {
     linkSolidity5(contract, libraryName, libraryAddress);
   } else {
     linkSolidity4(contract, libraryName, libraryAddress);
@@ -22,13 +26,16 @@ function linkSolidity4(
   libraryName: string,
   libraryAddress: string
 ) {
-  const address = libraryAddress.replace('0x', '');
+  const address = libraryAddress.replace("0x", "");
   const libraryNamePrefix = libraryName.slice(0, 36);
-  const pattern = new RegExp(`_+${libraryNamePrefix}_+`, 'g');
+  const pattern = new RegExp(`_+${libraryNamePrefix}_+`, "g");
   if (!pattern.exec(contract.evm.bytecode.object)) {
     throw new Error(`Can't link '${libraryName}'.`);
   }
-  contract.evm.bytecode.object = contract.evm.bytecode.object.replace(pattern, address);
+  contract.evm.bytecode.object = contract.evm.bytecode.object.replace(
+    pattern,
+    address
+  );
 }
 
 function linkSolidity5(
@@ -36,11 +43,11 @@ function linkSolidity5(
   libraryName: string,
   libraryAddress: string
 ) {
-  const address = libraryAddress.replace('0x', '');
-  const encodedLibraryName = utils
-    .solidityKeccak256(['string'], [libraryName])
+  const address = libraryAddress.replace("0x", "");
+  const encodedLibraryName = ethers
+    .solidityPackedSha256(["string"], [libraryName])
     .slice(2, 36);
-  const pattern = new RegExp(`_+\\$${encodedLibraryName}\\$_+`, 'g');
+  const pattern = new RegExp(`_+\\$${encodedLibraryName}\\$_+`, "g");
   const bytecode = contract.evm.bytecode.object;
   if (!pattern.exec(bytecode)) {
     throw new Error(`Can't link '${libraryName}'.`);

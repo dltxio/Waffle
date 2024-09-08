@@ -1,5 +1,8 @@
 # @ethereum-waffle/compiler
 
+## 6.0.0
+
+
 ## 4.0.3
 
 ### Patch Changes

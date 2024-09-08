@@ -38,7 +38,7 @@
     "build:cjs": "tsc -p tsconfig.build.json --outDir dist/cjs"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=18.19"
   },
   "dependencies": {
     "@resolver-engine/imports": "^0.3.3",
@@ -47,22 +47,22 @@
     "@types/mkdirp": "^0.5.2",
     "@types/node-fetch": "^2.6.1",
     "mkdirp": "^0.5.1",
-    "node-fetch": "^2.6.7"
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "@ethereum-waffle/chai": "workspace:*",
     "@ethereum-waffle/provider": "workspace:*",
     "@openzeppelin/contracts": "3.0.1",
     "@types/fs-extra": "^9.0.4",
-    "ethers": "5.6.2",
+    "eslint": "^7.14.0",
+    "ethers": "^6.13.2",
     "fs-extra": "^9.0.1",
-    "openzeppelin-solidity": "2.3.0",
-    "solc": "0.8.15",
-    "typechain": "^8.0.0",
     "mocha": "^8.2.1",
+    "openzeppelin-solidity": "2.3.0",
     "rimraf": "^3.0.2",
-    "typescript": "^4.6.2",
-    "eslint": "^7.14.0"
+    "solc": "0.8.15",
+    "typechain": "^8.3.2",
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
     "ethers": "*",
