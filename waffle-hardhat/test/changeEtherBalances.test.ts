@@ -1,14 +1,17 @@
-import {waffle} from 'hardhat';
-import {MockProvider} from 'ethereum-waffle';
-import {changeEtherBalancesTest} from '@ethereum-waffle/chai/test';
-import {TX_GAS, BASE_FEE_PER_GAS} from './constants';
+import { waffle } from "hardhat";
+import { MockProvider } from "ethereum-waffle";
+import { changeEtherBalancesTest } from "@ethereum-waffle/chai/test";
+import { TX_GAS, BASE_FEE_PER_GAS } from "./constants";
 
-describe('INTEGRATION: changeEtherBalance matcher', () => {
+describe("INTEGRATION: changeEtherBalance matcher", () => {
   const provider = waffle.provider as MockProvider;
 
   before(async () => {
-    await provider.send('hardhat_reset', []);
+    await provider.send("hardhat_reset", []);
   });
 
-  changeEtherBalancesTest(provider, {txGasFees: TX_GAS * BASE_FEE_PER_GAS, baseFeePerGas: BASE_FEE_PER_GAS});
+  changeEtherBalancesTest(provider, {
+    txGasFees: TX_GAS * BASE_FEE_PER_GAS,
+    baseFeePerGas: BASE_FEE_PER_GAS,
+  });
 });

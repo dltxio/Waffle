@@ -1,12 +1,12 @@
-import {waffle} from 'hardhat';
-import {MockProvider} from 'ethereum-waffle';
-import {chainingMatchersTest} from '@ethereum-waffle/chai/test';
+import { waffle } from "hardhat";
+import { MockProvider } from "ethereum-waffle";
+import { chainingMatchersTest } from "@ethereum-waffle/chai/test";
 
-describe('INTEGRATION: chaining', () => {
+describe("INTEGRATION: chaining", () => {
   const provider = waffle.provider as MockProvider;
 
   before(async () => {
-    await provider.send('hardhat_reset', []);
+    await provider.send("hardhat_reset", []);
   });
 
   chainingMatchersTest(provider);
