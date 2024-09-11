@@ -1,9 +1,9 @@
 {
   "name": "@ethereum-waffle/hardhat",
   "description": "A sweet set of chai matchers for your blockchain testing needs.",
-  "version": "4.0.4",
-  "author": "Marek Kirejczyk <account@ethworks.io> (http://ethworks.io)",
-  "repository": "git@github.com:EthWorks/Waffle.git",
+  "version": "6.0.0",
+  "author": "",
+  "repository": "git@github.com:dltxio/Waffle.git",
   "private": true,
   "license": "MIT",
   "main": "dist/cjs/src/index.js",
@@ -16,7 +16,7 @@
     "lint:fix": "eslint --fix '{src,test}/**/*.ts'"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=18.19"
   },
   "devDependencies": {
     "@ethereum-waffle/chai": "workspace:*",
@@ -24,11 +24,13 @@
     "@ethereum-waffle/provider": "workspace:*",
     "@nomiclabs/hardhat-ethers": "2.1.0",
     "@types/node": "^17.0.41",
-    "eslint": "^7.14.0",
+    "eslint": "^9.10.0",
     "ethereum-waffle": "workspace:*",
-    "ethers": "5.6.2",
-    "hardhat": "2.10.1",
+    "ethers": "^6.13.2",
+    "hardhat": "^2.22.10",
     "hardhat-waffle-dev": "2.0.3-dev.c5b5c29",
-    "mocha": "^8.2.1"
+    "mocha": "^10.7.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
   }
 }
