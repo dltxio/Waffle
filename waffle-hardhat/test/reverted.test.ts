@@ -2,7 +2,7 @@ import { waffle } from "hardhat";
 import { expect } from "chai";
 import { MockProvider } from "ethereum-waffle";
 import { revertedTest, revertedWithTest } from "@ethereum-waffle/chai/test";
-import { BigNumberish, ContractFactory } from "ethers";
+import { ContractFactory } from "ethers";
 import CustomError from "../build/contracts/CustomError.sol/Matchers.json";
 
 describe("INTEGRATION: Matchers: reverted", () => {
@@ -66,7 +66,7 @@ describe("INTEGRATION: Matchers: revertedWith", () => {
       await expect(matchers.doRevertWithOne())
         .to.be.revertedWith("One")
         .withArgs(
-          BigNumber.from("0"), // Check BigNumber instance as well.
+          BigInt("0"), // Check BigNumber instance as well.
           "message",
           "0x00cfbbaf7ddb3a1476767101c12a0162e241fbad2a0162e2410cfbbaf7162123"
         );
@@ -77,7 +77,7 @@ describe("INTEGRATION: Matchers: revertedWith", () => {
       await expect(matchers.doRevertWithBigNumber())
         .to.be.revertedWith("One")
         .withArgs(
-          BigNumberish.from("9007199254740991000000"),
+          BigInt("9007199254740991000000"),
           "message",
           "0x00cfbbaf7ddb3a1476767101c12a0162e241fbad2a0162e2410cfbbaf7162123"
         );
@@ -89,7 +89,7 @@ describe("INTEGRATION: Matchers: revertedWith", () => {
         expect(matchers.doRevertWithBigNumber())
           .to.be.revertedWith("One")
           .withArgs(
-            BigNumber.from("9007199254740991000001"), // different
+            BigInt("9007199254740991000001"), // different
             "message",
             "0x00cfbbaf7ddb3a1476767101c12a0162e241fbad2a0162e2410cfbbaf7162123"
           )
