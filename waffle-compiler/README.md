@@ -35,21 +35,21 @@ You can learn more about it [in the documentation](https://ethereum-waffle.readt
 Examples:
 ```ts
 // Compilation with a config file
-const {compileProject} = require('@ethereum-waffle/compiler');
+const {compileProject} = require("@ethereum-waffle/compiler");
 
 main();
 async function main () {
-  await compileProject('path/to/waffle.json');
+  await compileProject("path/to/waffle.json");
 }
 ```
 
 ```ts
 // Compilation with js config
-const {compileAndSave, compile} = require('@ethereum-waffle/compiler');
+const {compileAndSave, compile} = require("@ethereum-waffle/compiler");
 
 main();
 async function main () {
-  const config = { sourceDirectory: 'contracts', nodeModulesDirectory: 'node_modules' };
+  const config = { sourceDirectory: "contracts", nodeModulesDirectory: "node_modules" };
 
   // compile and save the output
   await compileAndSave(config);
@@ -64,5 +64,5 @@ async function main () {
 
 Example:
 ```ts
-const {link} = require('@ethereum-waffle/compiler');
+const {link} = require("@ethereum-waffle/compiler");
 ```
