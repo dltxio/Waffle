@@ -1,34 +1,34 @@
-import {providers, Wallet} from 'ethers';
-import {CallHistory, RecordedCall} from './CallHistory';
-import {defaultAccounts} from './defaultAccounts';
-import type {EthereumProvider, Provider} from 'ganache';
-import type {EthereumProviderOptions} from '@ganache/ethereum-options';
+import { providers, Wallet } from "ethers";
+import { CallHistory, RecordedCall } from "./CallHistory";
+import { defaultAccounts } from "./defaultAccounts";
+import type { EthereumProvider, Provider } from "ganache";
+import type { EthereumProviderOptions } from "@ganache/ethereum-options";
 
-import {deployENS, ENS} from '@ethereum-waffle/ens';
-import {injectRevertString} from './revertString';
+import { deployENS, ENS } from "@ethereum-waffle/ens";
+import { injectRevertString } from "./revertString";
 
-export {RecordedCall};
+export { RecordedCall };
 
 export interface MockProviderOptions {
   ganacheOptions: EthereumProviderOptions;
 }
 
 export class MockProvider extends providers.Web3Provider {
-  private _callHistory: CallHistory
+  private _callHistory: CallHistory;
   private _ens?: ENS;
 
   constructor(private options?: MockProviderOptions) {
     const mergedOptions: EthereumProviderOptions = {
       wallet: {
-        accounts: defaultAccounts
+        accounts: defaultAccounts,
       },
-      logging: {quiet: true},
+      logging: { quiet: true },
       chain: {
-        hardfork: 'berlin'
+        hardfork: "berlin",
       },
-      ...options?.ganacheOptions
+      ...options?.ganacheOptions,
     };
-    const provider: Provider = require('ganache').provider(mergedOptions);
+    const provider: Provider = require("ganache").provider(mergedOptions);
     const callHistory = new CallHistory();
     const patchedProvider = injectRevertString(callHistory.record(provider));
 
@@ -48,14 +48,18 @@ export class MockProvider extends providers.Web3Provider {
       ...this.formatter.formats,
       receipt: {
         ...this.formatter.formats.receipt,
-        revertString: (val: any) => val
-      }
+        revertString: (val: any) => val,
+      },
     };
   }
 
   getWallets() {
-    const accounts = (this.provider as unknown as EthereumProvider).getInitialAccounts();
-    return Object.values(accounts).map((x: any) => new Wallet(x.secretKey, this));
+    const accounts = (
+      this.provider as unknown as EthereumProvider
+    ).getInitialAccounts();
+    return Object.values(accounts).map(
+      (x: any) => new Wallet(x.secretKey, this)
+    );
   }
 
   createEmptyWallet() {

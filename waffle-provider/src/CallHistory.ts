@@ -1,6 +1,4 @@
-import {utils} from 'ethers';
-import {parseTransaction} from 'ethers/lib/utils';
-import type {Provider} from 'ganache';
+import { ethers, Provider, Transaction } from "ethers";
 
 export interface RecordedCall {
   readonly address: string | undefined;
@@ -13,7 +11,7 @@ export interface RecordedCall {
  * It is used by the `calledOnContract` matcher.
  */
 export class CallHistory {
-  private recordedCalls: RecordedCall[] = []
+  private recordedCalls: RecordedCall[] = [];
 
   clear() {
     this.recordedCalls = [];
@@ -35,16 +33,18 @@ export class CallHistory {
      * Otherwise some internal object might not have been created yet,
      * and there is a silently ignored error deep in ganache / ethereum VM.
      */
-    (provider as any).on('connect', () => {
+    (provider as any).on("connect", () => {
       /**
        * A single step over a single opcode inside the EVM.
        * We use it to intercept `CALL` and `STATICCALL` opcodes,
        * and track a history of internal calls between smart contracts.
        */
-      (provider as any).on('ganache:vm:tx:step', (args: any) => {
-        if (['CALL', 'STATICCALL'].includes(args.data.opcode.name)) {
+      (provider as any).on("ganache:vm:tx:step", (args: any) => {
+        if (["CALL", "STATICCALL"].includes(args.data.opcode.name)) {
           try {
-            callHistory.recordedCalls.push(toRecordedCall(decodeCallData(args.data)));
+            callHistory.recordedCalls.push(
+              toRecordedCall(decodeCallData(args.data))
+            );
           } catch (err) {
             console.log(err);
           }
@@ -61,7 +61,7 @@ export class CallHistory {
     return new Proxy(provider, {
       get(target, prop, receiver) {
         const original = (target as any)[prop as any];
-        if (typeof original !== 'function') {
+        if (typeof original !== "function") {
           // Some non-method property - returned as-is.
           return original;
         }
@@ -71,7 +71,7 @@ export class CallHistory {
           const originalResult = original.apply(target, args);
 
           // Every method other than `provider.request()` left intact.
-          if (prop !== 'request') return originalResult;
+          if (prop !== "request") return originalResult;
 
           const method = args[0]?.method;
           /**
@@ -81,15 +81,19 @@ export class CallHistory {
            * - `eth_sendTransaction` - a transaction,
            * - `eth_estimateGas` - gas estimation, typically precedes `eth_sendRawTransaction`.
            */
-          if (method === 'eth_call' || method === 'eth_sendTransaction') { // Record a query or a transaction.
-            callHistory.recordedCalls.push(toRecordedCall(args[0]?.params?.[0]));
-          } else if (method === 'eth_sendRawTransaction') { // Record a raw transaction.
-            const parsedTx = parseTransaction(args[0]?.params?.[0]);
+          if (method === "eth_call" || method === "eth_sendTransaction") {
+            // Record a query or a transaction.
+            callHistory.recordedCalls.push(
+              toRecordedCall(args[0]?.params?.[0])
+            );
+          } else if (method === "eth_sendRawTransaction") {
+            // Record a raw transaction.
+            const parsedTx = Transaction.from(args[0]?.params?.[0]);
             callHistory.recordedCalls.push(toRecordedCall(parsedTx));
           }
           return originalResult;
         };
-      }
+      },
     });
   }
 }
@@ -97,7 +101,7 @@ export class CallHistory {
 function toRecordedCall(message: any): RecordedCall {
   return {
     address: message.to ? decodeAddress(message.to) : undefined,
-    data: message.data ? utils.hexlify(message.data) : '0x'
+    data: message.data ? ethers.hexlify(message.data) : "0x",
   };
 }
 
@@ -107,20 +111,24 @@ function toRecordedCall(message: any): RecordedCall {
  */
 function decodeCallData(callData: any) {
   let addr: Buffer, argsOffset: Buffer, argsLength: Buffer;
-  if (callData.opcode.name === 'CALL') {
+  if (callData.opcode.name === "CALL") {
     [, addr, , argsOffset, argsLength] = [...callData.stack].reverse();
-  } else if (callData.opcode.name === 'STATICCALL') {
+  } else if (callData.opcode.name === "STATICCALL") {
     [, addr, argsOffset, argsLength] = [...callData.stack].reverse();
   } else {
-    throw new Error(`Unsupported call type for decoding call data: ${callData.opcode.name}`);
+    throw new Error(
+      `Unsupported call type for decoding call data: ${callData.opcode.name}`
+    );
   }
 
-  const decodedCallData = callData.memory
-    .slice(decodeNumber(argsOffset), decodeNumber(argsOffset) + decodeNumber(argsLength));
+  const decodedCallData = callData.memory.slice(
+    decodeNumber(argsOffset),
+    decodeNumber(argsOffset) + decodeNumber(argsLength)
+  );
 
   return {
     to: addr,
-    data: decodedCallData
+    data: decodedCallData,
   };
 }
 
@@ -141,5 +149,5 @@ function decodeAddress(data: Buffer): string {
   if (data.length < 20) {
     data = Buffer.concat([Buffer.alloc(20 - data.length, 0), data]);
   }
-  return utils.getAddress(utils.hexlify(data));
+  return ethers.getAddress(ethers.hexlify(data));
 }

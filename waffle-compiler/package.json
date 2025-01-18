@@ -22,9 +22,9 @@
     "typescript",
     "library"
   ],
-  "homepage": "https://github.com/EthWorks/Waffle",
+  "homepage": "https://github.com/dltxio/Waffle",
   "bugs": {
-    "url": "https://github.com/EthWorks/Waffle/issues"
+    "url": "https://github.com/dltxio/Waffle/issues"
   },
   "main": "dist/cjs/src/index.js",
   "module": "dist/esm/src/index.ts",

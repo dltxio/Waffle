@@ -38,7 +38,7 @@
     "build:cjs": "tsc -p tsconfig.build.json --outDir dist/cjs"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=18.19"
   },
   "dependencies": {
     "@ethereum-waffle/ens": "workspace:*",
