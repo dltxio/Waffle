@@ -1,5 +1,5 @@
-import debug from 'debug';
+import debug from "debug";
 
-const log = debug('waffle:waffle-chai');
+const log = debug("waffle:waffle-chai");
 
-export {log};
+export { log };

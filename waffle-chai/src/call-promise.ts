@@ -1,10 +1,12 @@
-import {providers} from 'ethers';
+import { providers } from "ethers";
 
 type TransactionResponse = providers.TransactionResponse;
 type MaybePromise<T> = T | Promise<T>;
 
-const isTransactionResponse = (response: any): response is TransactionResponse => {
-  return 'wait' in response;
+const isTransactionResponse = (
+  response: any
+): response is TransactionResponse => {
+  return "wait" in response;
 };
 
 /**
@@ -21,23 +23,23 @@ const isTransactionResponse = (response: any): response is TransactionResponse =
  *  Attention: some matchers require to be called on a transaction.
  */
 export const callPromise = (chaiObj: any) => {
-  if ('callPromise' in chaiObj) {
+  if ("callPromise" in chaiObj) {
     return;
   }
 
   const call = chaiObj._obj;
   let response: MaybePromise<any>;
 
-  if (typeof call === 'function') {
+  if (typeof call === "function") {
     response = call();
   } else {
     response = call;
   }
 
-  if (!('then' in response)) {
+  if (!("then" in response)) {
     if (isTransactionResponse(response)) {
       chaiObj.txResponse = response;
-      chaiObj.callPromise = response.wait().then(txReceipt => {
+      chaiObj.callPromise = response.wait().then((txReceipt) => {
         chaiObj.txReceipt = txReceipt;
       });
     } else {

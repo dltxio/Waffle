@@ -199,8 +199,6 @@ In configuration file you can add optional field with path to flatten files:
 }
 ```
 
-
-
 ### Running tests
 To run the tests run the following command:
 
